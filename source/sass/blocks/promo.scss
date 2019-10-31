@@ -1,0 +1,94 @@
+.promo {
+  @include margin-auto;
+  display: flex;
+  flex-direction: row;
+  max-width: 1494px;
+  width: 73.48958333333333%;
+  min-width: 1010px;
+  padding-top: 173px;
+}
+
+.text-block {
+  display: flex;
+  flex-direction: column;
+  color: $promo-text;
+  padding-top: 53px;
+  margin-left: 38px;
+  margin-bottom: 92px;
+  margin-right: 71px;
+
+  &_slogan {
+    @include roboto-condensed(700);
+    width: 718px;
+    margin: 0;
+    margin-bottom: 30px;
+    font-size: 80px;
+    line-height: 94px;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+  }
+
+  &_text {
+    @include pt-mono;
+    width: 718px;
+    margin: 0;
+    position: relative;
+    font-size: 22px;
+    line-height: 34px;
+    padding-left: 96px;
+    margin-bottom: 44px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 66px;
+      height: 2px;
+      left: 2px;
+      top: 15px;
+      background-color: $decoration-color;
+    }
+  }
+}
+
+.promo button {
+  @include roboto-condensed(700);
+  margin-left: 96px;
+  width: 407px;
+  height: 55px;
+  margin-bottom: 93px;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.05em;
+  color: $header-text;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 5px;
+  background-color: $promo-button-background;
+  cursor: pointer;
+}
+
+.promo button:hover {
+  opacity: 0.5;
+}
+
+.promo a {
+  @include pt-mono;
+  font-size: 14px;
+  line-height: 16px;
+  margin-left: 2px;
+  width: 25px;
+  text-decoration: none;
+  color: $promo-text;
+  opacity: 0.5;
+  writing-mode: tb-rl;
+  transform: rotate(180deg);
+  cursor: pointer;
+}
+
+.promo a:hover {
+  opacity: 0.25;
+}
+
+.promo picture {
+  margin-right: -38px;
+}

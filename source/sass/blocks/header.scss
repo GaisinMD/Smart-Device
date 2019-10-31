@@ -1,21 +1,23 @@
 .top-wrapper {
-  @include margin-auto;
-  max-width: 1920px;
+  //@include margin-auto;
   padding-top: 33px;
   background: url("/img/header_background.png") center top no-repeat,
     url("/img/group_of_two_reactangles.png") center top no-repeat;
   background-size: cover, auto;
-  background-color: $background-color-first;
+  background-color: $background-color-top-wrapper;
 }
 
 header {
+  @include margin-auto;
   display: flex;
   flex-direction: row;
   max-width: 1411px;
-  margin-left: 13.17708333333333%;
+  width: 73.48958333333333%;
+  min-width: 1004px;
 }
 
 .logo {
+  min-width: 52px;
   cursor: pointer;
 }
 
@@ -26,6 +28,7 @@ header {
 .name {
   margin-left: 1.13394755492558%;
   cursor: pointer;
+  min-width: 134px;
 
   &-firm {
     @include roboto-condensed(700);
@@ -51,6 +54,14 @@ header {
   opacity: 0.5;
 }
 
+.links-wrapper {
+  display: flex;
+  flex-direction: row;
+  width: 46.70446491849752%;
+  min-width: 650px;
+  margin-left: auto;
+}
+
 .mailto,
 .phone-number {
   @include pt-mono;
@@ -58,14 +69,13 @@ header {
   align-items: center;
   font-size: 16px;
   line-height: 18px;
-  margin-left: 39.12119064493267%;
   text-decoration: none;
   color: $header-text;
   cursor: pointer;
 }
 
 .mailto {
-  margin-left: 39.12119064493267%;
+  min-width: 135px;
 }
 
 .mailto span {
@@ -73,7 +83,8 @@ header {
 }
 
 .phone-number {
-  margin-left: 6.23671155209072%;
+  min-width: 206.813px;
+  margin-left: 13.3535660091047%;
 }
 
 .phone-number span {
