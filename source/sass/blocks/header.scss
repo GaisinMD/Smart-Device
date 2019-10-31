@@ -1,0 +1,107 @@
+.top-wrapper {
+  @include margin-auto;
+  max-width: 1920px;
+  padding-top: 33px;
+  background: url("/img/header_background.png") center top no-repeat,
+    url("/img/group_of_two_reactangles.png") center top no-repeat;
+  background-size: cover, auto;
+  background-color: $background-color-first;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  max-width: 1411px;
+  margin-left: 13.17708333333333%;
+}
+
+.logo {
+  cursor: pointer;
+}
+
+.logo:hover {
+  opacity: 0.5;
+}
+
+.name {
+  margin-left: 1.13394755492558%;
+  cursor: pointer;
+
+  &-firm {
+    @include roboto-condensed(700);
+    font-size: 25px;
+    line-height: 29px;
+    color: $header-text;
+
+    margin: 0;
+    margin-top: 6px;
+  }
+
+  &-tagline {
+    @include roboto;
+    font-size: 12px;
+    line-height: 14px;
+    color: $tagline-text;
+
+    margin: 0;
+  }
+}
+
+.name:hover {
+  opacity: 0.5;
+}
+
+.mailto,
+.phone-number {
+  @include pt-mono;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  line-height: 18px;
+  margin-left: 39.12119064493267%;
+  text-decoration: none;
+  color: $header-text;
+  cursor: pointer;
+}
+
+.mailto {
+  margin-left: 39.12119064493267%;
+}
+
+.mailto span {
+  margin-left: 20px;
+}
+
+.phone-number {
+  margin-left: 6.23671155209072%;
+}
+
+.phone-number span {
+  margin-left: 16px;
+}
+
+.mailto:hover,
+.phone-number:hover {
+  opacity: 0.5;
+}
+
+header button {
+  @include roboto-condensed(700);
+  align-self: center;
+  margin-left: auto;
+  width: 180px;
+  height: 45px;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  color: $header-text;
+  text-transform: uppercase;
+  border: 1px solid $border-button-color;
+  border-radius: 5px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+header button:hover {
+  opacity: 0.5;
+}
