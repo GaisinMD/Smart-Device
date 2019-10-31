@@ -1,5 +1,4 @@
 .top-wrapper {
-  //@include margin-auto;
   padding-top: 33px;
   background: url("/img/header_background.png") center top no-repeat,
     url("/img/group_of_two_reactangles.png") center top no-repeat;
@@ -115,4 +114,63 @@ header button {
 
 header button:hover {
   opacity: 0.5;
+}
+
+//
+@media (max-width: $desktop-min-width) {
+  .top-wrapper {
+    padding-top: 20px;
+    background: url("/img/header_background.png") center top no-repeat,
+      url("/img/group_of_two_reactangles.png") center top no-repeat;
+    background-size: auto, auto;
+    background-color: $background-color-top-wrapper;
+  }
+
+  header {
+    @include margin-auto;
+    display: flex;
+    flex-direction: row;
+    width: 93.75%;
+    min-width: 93.75%;
+  }
+
+  .name {
+    margin-left: 2.22222222222222%;
+  }
+
+  .links-wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 11.52777777777778%;
+    min-width: 11.52777777777778%;
+    margin-left: auto;
+  }
+
+  .mailto {
+    min-width: 25px;
+  }
+
+  .phone-number {
+    margin-left: 39.75903614457831%;
+    min-width: 24px;
+  }
+
+  .mailto span,
+  .phone-number span {
+    display: none;
+  }
+
+  .mailto img {
+    width: 25px;
+    height: 19px;
+  }
+
+  .phone-number img {
+    width: 24px;
+    height: 24px;
+  }
+
+  header button {
+    display: none;
+  }
 }

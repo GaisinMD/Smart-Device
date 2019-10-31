@@ -89,6 +89,70 @@
   opacity: 0.25;
 }
 
-.promo picture {
+.promo img {
   margin-right: -38px;
+}
+
+//
+@media (max-width: $desktop-min-width) {
+  .promo {
+    margin-right: 0;
+    min-width: 680px;
+    width: 88.54166666666667%;
+    padding-top: 41px;
+  }
+
+  .text-block {
+    padding-top: 75px;
+    margin-left: 0;
+    margin-bottom: 92px;
+    margin-right: 0;
+
+    &_slogan {
+      width: 404px;
+      margin: 0;
+      margin-bottom: 30px;
+      font-size: 60px;
+      line-height: 70px;
+    }
+
+    &_text {
+      @include pt-mono;
+      width: 404px;
+      margin: 0;
+      position: relative;
+      font-size: 18px;
+      line-height: 156.8%;
+      padding-left: 48px;
+      margin-bottom: 44px;
+
+      &::before {
+        position: absolute;
+        content: "";
+        width: 33px;
+        height: 2px;
+        left: 2px;
+        top: 15px;
+        background-color: $decoration-color;
+      }
+    }
+  }
+
+  .promo button {
+    @include roboto-condensed(700);
+    margin-left: 48px;
+    width: 379px;
+    margin-bottom: 93px;
+  }
+
+  .promo a {
+    display: none;
+  }
+
+  .promo img {
+    margin-left: -15px;
+    min-width: 465px;
+    height: 340px;
+    overflow: hidden;
+  }
 }
