@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: row;
   max-width: 1494px;
-  width: 73.48958333333333%;
+  width: 73.72958333333333%;
   min-width: 1010px;
   padding-top: 173px;
   //overflow: hidden;
@@ -14,15 +14,14 @@
   flex-direction: column;
   color: $promo-text;
   padding-top: 53px;
-  margin-left: 38px;
-  margin-bottom: 92px;
+  margin-bottom: 90px;
   margin-right: 71px;
 
   &_slogan {
     @include roboto-condensed(700);
     width: 718px;
     margin: 0;
-    margin-bottom: 30px;
+    margin-bottom: 28px;
     font-size: 80px;
     line-height: 94px;
     letter-spacing: 0.07em;
@@ -37,7 +36,7 @@
     font-size: 22px;
     line-height: 34px;
     padding-left: 96px;
-    margin-bottom: 44px;
+    margin-bottom: 43px;
 
     &::before {
       position: absolute;
@@ -56,7 +55,7 @@
   margin-left: 96px;
   width: 407px;
   height: 55px;
-  margin-bottom: 93px;
+  margin-bottom: 95px;
   font-size: 16px;
   line-height: 19px;
   letter-spacing: 0.05em;
@@ -92,11 +91,10 @@
 
 .promo img {
   min-width: 705px;
-  margin-right: -38px;
 }
 
 //
-@media (max-width: $desktop-min-width) {
+@media (max-width: $tablet-max-width) {
   .promo {
     margin-right: 0;
     min-width: 680px;
@@ -120,12 +118,9 @@
     }
 
     &_text {
-      @include pt-mono;
       width: 404px;
-      margin: 0;
-      position: relative;
       font-size: 18px;
-      line-height: 156.8%;
+      line-height: 28px;
       padding-left: 52px;
       margin-bottom: 55px;
 
@@ -142,7 +137,6 @@
   }
 
   .promo button {
-    @include roboto-condensed(700);
     margin-left: 51px;
     width: 379px;
     margin-bottom: 93px;
@@ -156,5 +150,60 @@
     margin-left: -7px;
     min-width: 465px;
     height: 340px;
+  }
+}
+
+@media (max-width: $mobile-max-width) {
+  .promo {
+    flex-direction: column-reverse;
+    margin-right: 0;
+    min-width: 320px;
+    width: 100%;
+    padding-top: 34px;
+    padding-left: 15px;
+    overflow: hidden;
+  }
+
+  .text-block {
+    padding-top: 0;
+    margin-top: -30px;
+    margin-left: auto;
+    margin-bottom: 70px;
+    margin-right: auto;
+    z-index: 1;
+
+    &_slogan {
+      width: 277px;
+      margin: 0;
+      margin-bottom: 25px;
+      font-size: 40px;
+      line-height: 47px;
+    }
+
+    &_text {
+      width: 293px;
+      font-size: 16px;
+      line-height: 25px;
+      padding-left: 52px;
+      margin-bottom: 40px;
+    }
+  }
+
+  .promo button {
+    margin-left: 3px;
+    width: 287px;
+    margin-bottom: 0;
+  }
+
+  .promo picture {
+    max-width: 301px;
+    margin-left: auto;
+  }
+
+  .promo img {
+    margin-left: 5px;
+    min-width: 301px;
+    width: 301px;
+    height: 220px;
   }
 }

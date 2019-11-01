@@ -1,15 +1,19 @@
 'use strict';
-var pageHeader = document.querySelector('.page-header');
-var headerToggle = document.querySelector('.page-header__toggle');
+var button = document.querySelector('.promo').querySelector('button');
+var mobileButtonText = 'Бесплатная консультация';
+var buttonText = 'Получить бесплатную консультацию';
+var mobileMaxWidth = 767;
 
-pageHeader.classList.remove('page-header--nojs');
 
-headerToggle.addEventListener('click', function () {
-  if (pageHeader.classList.contains('page-header--closed')) {
-    pageHeader.classList.remove('page-header--closed');
-    pageHeader.classList.add('page-header--opened');
-  } else {
-    pageHeader.classList.add('page-header--closed');
-    pageHeader.classList.remove('page-header--opened');
+function changeButtonText() {
+  if (button) {
+    if (document.body.clientWidth > mobileMaxWidth) {
+      button.textContent = buttonText;
+    } else {
+      button.textContent = mobileButtonText;
+    }
   }
-});
+}
+
+changeButtonText();
+window.addEventListener('resize', changeButtonText);

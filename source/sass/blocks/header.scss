@@ -10,13 +10,14 @@ header {
   @include margin-auto;
   display: flex;
   flex-direction: row;
-  max-width: 1411px;
-  width: 73.48958333333333%;
+  max-width: 1500px;
+  width: 74.48958333333333%;
   min-width: 1004px;
 }
 
 .logo {
   min-width: 52px;
+  margin-left: 10px;
   cursor: pointer;
 }
 
@@ -59,6 +60,7 @@ header {
   width: 46.70446491849752%;
   min-width: 650px;
   margin-left: auto;
+  padding-left: 8px;
 }
 
 .mailto,
@@ -97,8 +99,8 @@ header {
 
 header button {
   @include roboto-condensed(700);
-  align-self: center;
-  margin-left: auto;
+  margin-top: 4px;
+  margin-left: 50px;
   width: 180px;
   height: 45px;
   font-size: 14px;
@@ -117,7 +119,7 @@ header button:hover {
 }
 
 //
-@media (max-width: $desktop-min-width) {
+@media (max-width: $tablet-max-width) {
   .top-wrapper {
     padding-top: 20px;
     background: url("/img/header_background.png") center top no-repeat,
@@ -139,11 +141,8 @@ header button:hover {
   }
 
   .links-wrapper {
-    display: flex;
-    flex-direction: row;
     width: 11.52777777777778%;
     min-width: 11.52777777777778%;
-    margin-left: auto;
     padding-left: 15px;
   }
 
@@ -180,5 +179,50 @@ header button:hover {
 
   header button {
     display: none;
+  }
+}
+
+@media (max-width: $mobile-max-width) {
+  .top-wrapper {
+    padding-top: 17px;
+    background: url("/img/header_background.png") center top no-repeat,
+      url("/img/group_of_two_reactangles.png") center -130px no-repeat;
+    background-size: auto, cover;
+    background-color: $background-color-top-wrapper;
+    min-width: $mobile-min-width;
+  }
+
+  header {
+    @include margin-auto;
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    min-width: 90%;
+    margin-left: 17px;
+    margin-right: 0;
+  }
+
+  .logo {
+    min-width: 38px;
+    width: 38px;
+  }
+
+  .name {
+    display: none;
+  }
+
+  .links-wrapper {
+    width: 25.34722222222222%;
+    min-width: 25.34722222222222%;
+    padding-left: 0;
+  }
+
+  .mailto {
+    margin-top: 9px;
+  }
+
+  .phone-number {
+    margin-left: 30%;
+    margin-top: 5px;
   }
 }
