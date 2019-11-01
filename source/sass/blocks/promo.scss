@@ -6,6 +6,7 @@
   width: 73.48958333333333%;
   min-width: 1010px;
   padding-top: 173px;
+  //overflow: hidden;
 }
 
 .text-block {
@@ -90,6 +91,7 @@
 }
 
 .promo img {
+  min-width: 705px;
   margin-right: -38px;
 }
 
@@ -99,19 +101,20 @@
     margin-right: 0;
     min-width: 680px;
     width: 88.54166666666667%;
-    padding-top: 41px;
+    padding-top: 36px;
+    overflow: hidden;
   }
 
   .text-block {
     padding-top: 75px;
-    margin-left: 0;
-    margin-bottom: 92px;
+    margin-left: 15px;
+    margin-bottom: 70px;
     margin-right: 0;
 
     &_slogan {
       width: 404px;
       margin: 0;
-      margin-bottom: 30px;
+      margin-bottom: 29px;
       font-size: 60px;
       line-height: 70px;
     }
@@ -123,16 +126,16 @@
       position: relative;
       font-size: 18px;
       line-height: 156.8%;
-      padding-left: 48px;
-      margin-bottom: 44px;
+      padding-left: 52px;
+      margin-bottom: 55px;
 
       &::before {
         position: absolute;
         content: "";
         width: 33px;
         height: 2px;
-        left: 2px;
-        top: 15px;
+        left: 4px;
+        top: 16px;
         background-color: $decoration-color;
       }
     }
@@ -140,7 +143,7 @@
 
   .promo button {
     @include roboto-condensed(700);
-    margin-left: 48px;
+    margin-left: 51px;
     width: 379px;
     margin-bottom: 93px;
   }
@@ -150,9 +153,8 @@
   }
 
   .promo img {
-    margin-left: -15px;
+    margin-left: -7px;
     min-width: 465px;
     height: 340px;
-    overflow: hidden;
   }
 }

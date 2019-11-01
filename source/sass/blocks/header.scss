@@ -121,8 +121,8 @@ header button:hover {
   .top-wrapper {
     padding-top: 20px;
     background: url("/img/header_background.png") center top no-repeat,
-      url("/img/group_of_two_reactangles.png") center top no-repeat;
-    background-size: auto, auto;
+      url("/img/group_of_two_reactangles.png") center -130px no-repeat;
+    background-size: auto, cover;
     background-color: $background-color-top-wrapper;
   }
 
@@ -144,15 +144,23 @@ header button:hover {
     width: 11.52777777777778%;
     min-width: 11.52777777777778%;
     margin-left: auto;
+    padding-left: 15px;
+  }
+
+  .mailto,
+  .phone-number {
+    align-items: flex-start;
   }
 
   .mailto {
     min-width: 25px;
+    margin-top: 13px;
   }
 
   .phone-number {
-    margin-left: 39.75903614457831%;
+    margin-left: 50%;
     min-width: 24px;
+    margin-top: 12px;
   }
 
   .mailto span,
