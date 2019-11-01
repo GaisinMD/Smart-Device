@@ -3,19 +3,18 @@
   display: flex;
   flex-direction: row;
   max-width: 1494px;
-  width: 73.72958333333333%;
+  width: 74%;
   min-width: 1010px;
-  padding-top: 173px;
-  //overflow: hidden;
+  padding-top: 170px;
 }
 
 .text-block {
   display: flex;
   flex-direction: column;
   color: $promo-text;
-  padding-top: 53px;
+  padding-top: 56px;
   margin-bottom: 90px;
-  margin-right: 71px;
+  margin-right: 5%;
 
   &_slogan {
     @include roboto-condensed(700);
@@ -87,10 +86,6 @@
 
 .promo a:hover {
   opacity: 0.25;
-}
-
-.promo img {
-  min-width: 705px;
 }
 
 //

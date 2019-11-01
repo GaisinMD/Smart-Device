@@ -6,7 +6,9 @@ $tablet-max-width: 1023px;
 //color scheme
 $cyan: #00b2ff;
 $white: #ffffff;
+$light-grey: #fafafa;
 $grey: #788891;
+$light-dark-grey: #626962;
 $dark-grey: #666666;
 $dark: #1b2d37;
 $dark-blue: #203c42;
@@ -20,3 +22,9 @@ $border-button-color: $white;
 $promo-text: $white;
 $decoration-color: $white;
 $promo-button-background: $cyan;
+
+$footer-background: $light-grey;
+$footer-logo-text: $dark-blue;
+$footer-heading: $dark;
+$footer-main-text: $dark;
+$footer-line: $light-dark-grey;

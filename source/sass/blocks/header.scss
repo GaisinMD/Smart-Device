@@ -11,13 +11,12 @@ header {
   display: flex;
   flex-direction: row;
   max-width: 1500px;
-  width: 74.48958333333333%;
+  width: 73.48958333333333%;
   min-width: 1004px;
 }
 
 .logo {
   min-width: 52px;
-  margin-left: 10px;
   cursor: pointer;
 }
 
@@ -26,7 +25,7 @@ header {
 }
 
 .name {
-  margin-left: 1.13394755492558%;
+  margin-left: 16px;
   cursor: pointer;
   min-width: 134px;
 
@@ -60,7 +59,6 @@ header {
   width: 46.70446491849752%;
   min-width: 650px;
   margin-left: auto;
-  padding-left: 8px;
 }
 
 .mailto,
