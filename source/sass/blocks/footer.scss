@@ -79,6 +79,10 @@ footer h2 {
   opacity: 0.5;
 }
 
+.social .copyright_year {
+  display: none;
+}
+
 .site-sections {
   width: 46.53%;
   min-width: 440px;
@@ -180,5 +184,17 @@ footer h2 {
     min-width: 100%;
     display: flex;
     flex-direction: row;
+  }
+
+  .social .copyright_year {
+    @include pt-mono;
+    display: block;
+    font-size: 13px;
+    line-height: 24px;
+    opacity: 0.5;
+    color: $footer-main-text;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    text-decoration: none;
   }
 }
