@@ -1,11 +1,11 @@
 .about {
   @include margin-auto;
-  width: 60.9375%;
+  width: 64%;
   max-width: 1500px;
+  min-width: 1024px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
 }
 
 .year-wrapper {
@@ -14,6 +14,7 @@
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
+  margin-top: 5px;
 }
 
 .year-wrapper div {
@@ -27,8 +28,8 @@
 }
 
 .about article {
-  width: 984px;
-  margin-left: auto;
+  margin-left: 2.44100895036615%;
+  width: 80%;
   color: $about-text;
 }
 
@@ -36,12 +37,16 @@
   @include roboto-condensed(400);
   font-size: 36px;
   line-height: 51px;
+  margin-top: 0;
+  margin-bottom: 20px;
 }
 
 .about article p {
   @include pt-mono;
   font-size: 16px;
   line-height: 22px;
+  margin-top: 0;
+  margin-bottom: 23px;
 }
 
 .about article button {
@@ -57,6 +62,7 @@
   border-radius: 5px;
   background-color: $about-button-background;
   cursor: pointer;
+  margin-top: 15px;
 }
 
 .about article button:hover {
