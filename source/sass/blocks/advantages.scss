@@ -1,0 +1,89 @@
+.advantages-about-wrapper {
+  padding-top: 109px;
+}
+
+.advantages {
+  @include margin-auto;
+  width: 60.9375%;
+  max-width: 1500px;
+  margin-bottom: 80px;
+}
+
+.advantages ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.advantages ul li {
+  position: relative;
+  width: 48.71794871794872%;
+  min-height: 299px;
+  min-width: 485px;
+  margin-bottom: 30px;
+  border: 1px solid $advantages-block-borders;
+}
+
+.advantages ul li::before {
+  position: absolute;
+  content: "";
+  width: 3px;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: $advantages-block-vertical-line;
+}
+
+.advantages svg {
+  fill: $advantages-block-icon;
+  margin-bottom: 16px;
+
+}
+
+.advantages ul li:hover {
+  background-color: $hover-advantages-block-background;
+
+  svg {
+    fill: $hover-advantages-block-icon;
+  }
+
+  h3 {
+    color: $hover-advantages-block-header;
+  }
+
+  p {
+    color: $hover-advantages-block-text;
+  }
+}
+
+.advantages a {
+  display: block;
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+  padding-left: 43px;
+  padding-top: 40px;
+}
+
+.advantages h3 {
+  @include roboto-condensed(400);
+  color: $advantages-block-header;
+  font-size: 24px;
+  line-height: 34px;
+  width: 93%;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.advantages p {
+  @include pt-mono;
+  width: 93%;
+  font-size: 16px;
+  line-height: 22px;
+  color: $advantages-block-text;
+}

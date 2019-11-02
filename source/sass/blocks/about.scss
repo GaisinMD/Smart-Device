@@ -1,0 +1,64 @@
+.about {
+  @include margin-auto;
+  width: 60.9375%;
+  max-width: 1500px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.year-wrapper {
+  display: flex;
+  background-image: url("/img/electronic_background.png");
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.year-wrapper div {
+  @include roboto-condensed(700);
+  font-size: 156px;
+  color: $black;
+  background: $white;
+  mix-blend-mode: lighten;
+  writing-mode: tb-rl;
+  transform: rotate(180deg);
+}
+
+.about article {
+  width: 984px;
+  margin-left: auto;
+  color: $about-text;
+}
+
+.about article h2 {
+  @include roboto-condensed(400);
+  font-size: 36px;
+  line-height: 51px;
+}
+
+.about article p {
+  @include pt-mono;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.about article button {
+  @include roboto-condensed(700);
+  width: 180px;
+  height: 45px;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  color: $about-button-text;
+  text-transform: uppercase;
+  border: 1px solid $about-button-border;
+  border-radius: 5px;
+  background-color: $about-button-background;
+  cursor: pointer;
+}
+
+.about article button:hover {
+  opacity: 0.5;
+}

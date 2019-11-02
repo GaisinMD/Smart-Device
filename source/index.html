@@ -18,22 +18,31 @@
 </head>
 
 <body>
+  <div style="display: none;">
+    <include src="build/img/sprite_auto.svg"></include>
+  </div>
   <div class="top-wrapper">
     <header>
-      <a class="logo">
-        <img src="img/logo.svg" width="52" height="52" alt="Логотип Smart Device">
+      <a class="logo" aria-label="Логотип компании Smart Device">
+        <svg height="52" width="52">
+          <use xlink:href="#logo"></use>
+        </svg>
       </a>
       <a class="name">
         <p class="name name-firm">Smart Device</p>
         <p class="name name-tagline">умные технологии</p>
       </a>
       <div class="links-wrapper">
-        <a class="mailto" href="mailto:info@sd.ru">
-          <img src="img/envelope.svg" width="19" height="14" alt="Envelope">
+        <a class="mailto" href="mailto:info@sd.ru" aria-label="Электронный адрес компании Smart Device">
+          <svg height="14" width="19">
+            <use xlink:href="#envelope"></use>
+          </svg>
           <span>info@sd.ru</span>
         </a>
-        <a class="phone-number" href="tel:+7(495)0005252">
-          <img src="img/phone-call.svg" width="18" height="18" alt="Phone call">
+        <a class="phone-number" href="tel:+7(495)0005252" aria-label="Телефон компании Smart Device">
+          <svg height="18" width="18">
+            <use xlink:href="#phone-call"></use>
+          </svg>
           <span>+7 (495) 000 52 52</span>
         </a>
         <button type="button">Заказать звонок</button>
@@ -57,7 +66,76 @@
   </div>
 
   <main>
-
+    <h1 class="visually-hidden">"Сайт компании Smart Device"</h1>
+    <div class="advantages-about-wrapper">
+      <section class="advantages">
+        <h2 class="visually-hidden">Наши преимущества</h2>
+        <ul>
+          <li>
+            <a>
+              <article>
+                <svg height="35" width="29">
+                  <use xlink:href="#stopwatch"></use>
+                </svg>
+                <h3>Оперативные сроки</h3>
+                <p>Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить и
+                  доставлять заказы плат и комплектующих в самые короткие сроки</p>
+              </article>
+            </a>
+          </li>
+          <li>
+            <a>
+              <article>
+                <svg height="35" width="35">
+                  <use xlink:href="#group"></use>
+                </svg>
+                <h3>Крупные поставщики</h3>
+                <p>Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND.
+                  Сотрудничество с такими компаниями обеспичивает хорошее качество нашей продукции.</p>
+              </article>
+            </a>
+          </li>
+          <li>
+            <a>
+              <article>
+                <svg height="31" width="36">
+                  <use xlink:href="#detective"></use>
+                </svg>
+                <h3>Полная конфиденциальность</h3>
+                <p>По желанию клиента мы обеспечиваем полную конфеденциальность.</p>
+              </article>
+            </a>
+          </li>
+          <li>
+            <a>
+              <article>
+                <svg height="35" width="35">
+                  <use xlink:href="#tag"></use>
+                </svg>
+                <h3>Персонализация стоимости</h3>
+                <p>Мы подбираем определенную фабрику, поставщиков, вид доставки, чтобы установить ту цену, которая Вас
+                  устраивает.</p>
+              </article>
+            </a>
+          </li>
+        </ul>
+      </section>
+      <section class="about">
+        <div class="year-wrapper">
+          <div>2005</div>
+        </div>
+        <article>
+          <h2>О компании</h2>
+          <p>Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с
+            1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.</p>
+          <p>Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND.
+            Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог (РЖД),
+            РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители
+            светотехники России.</p>
+          <button type="button">Подробнее</button>
+        </article>
+      </section>
+    </div>
   </main>
 
   <footer>
@@ -65,8 +143,10 @@
       <section class="social">
         <h2 class="visually-hidden">Логотип и ссылки на соцсети</h2>
         <div class="logo-footer">
-          <a class="logo">
-            <img src="img/logo.svg" width="52" height="52" alt="Логотип Smart Device">
+          <a class="logo" aria-label="Логотип компании Smart Device">
+            <svg height="52" width="52">
+              <use xlink:href="#logo"></use>
+            </svg>
           </a>
           <a class="name">
             <p class="name-firm">Service Device</p>
@@ -76,18 +156,24 @@
         <a href="#" class="copyright_year">1999-2018 SD Service Devices</a>
         <ul>
           <li>
-            <a href="#">
-              <img src="img/social_facebook.svg" width="27" height="27" alt="Фейсбук">
+            <a href="#" aria-label="Переход на наш аккаунт в Фейсбуке">
+              <svg height="27" width="27">
+                <use xlink:href="#social_facebook"></use>
+              </svg>
             </a>
           </li>
           <li>
-            <a href="#">
-              <img src="img/social_ok.svg" width="27" height="27" alt="Одноклассники">
+            <a href="#" aria-label="Переход на наш аккаунт в Однокласниках">
+              <svg height="27" width="27">
+                <use xlink:href="#social_ok"></use>
+              </svg>
             </a>
           </li>
           <li>
-            <a href="#">
-              <img src="img/social_vk.svg" width="27" height="27" alt="ВКонтакте">
+            <a href="#" aria-label="Переход на наш аккаунт в Вконтакте">
+              <svg height="27" width="27">
+                <use xlink:href="#social_vk"></use>
+              </svg>
             </a>
           </li>
         </ul>

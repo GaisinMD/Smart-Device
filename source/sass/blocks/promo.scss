@@ -88,6 +88,10 @@
   opacity: 0.25;
 }
 
+.promo img {
+  min-width: 705px;
+}
+
 //
 @media (max-width: $tablet-max-width) {
   .promo {
