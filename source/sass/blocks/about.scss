@@ -68,3 +68,56 @@
 .about article button:hover {
   opacity: 0.5;
 }
+
+//
+@media (max-width: $tablet-max-width) {
+  .about {
+    width: 93.75%;
+    min-width: 720px;
+  }
+
+  .year-wrapper div {
+    font-size: 178px;
+  }
+
+  .about article {
+    margin-left: 0;
+    width: 73.9%;
+    min-width: 532px;
+  }
+
+  .about article h2 {
+    font-size: 32px;
+    line-height: 45px;
+    margin-bottom: 24px;
+  }
+
+  .about article button {
+    margin-top: 11px;
+  }
+}
+
+//
+@media (max-width: $mobile-max-width) {
+  .about {
+    width: 90.625%;
+    min-width: 290px;
+  }
+
+  .year-wrapper {
+    display: none;
+  }
+
+  .about article h2 {
+    font-size: 28px;
+    line-height: 45px;
+    margin-bottom: 24px;
+  }
+
+  .about article {
+    width: 90.625%;
+    min-width: 290px;
+    margin-left: 0;
+    margin-bottom: 40px;
+  }
+}
