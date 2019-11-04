@@ -1,0 +1,100 @@
+.wrapper-goods {
+  background-color: $goods-background;
+  padding-bottom: 128px;
+}
+
+.goods {
+  @include margin-auto;
+  width: 60.9375%;
+  max-width: 1500px;
+  min-width: 1110px;
+  padding-top: 59px;
+}
+
+.goods h2 {
+  @include roboto-condensed(400);
+  font-size: 36px;
+  line-height: 51px;
+  margin-bottom: 50px;
+  color: $goods-text;
+}
+
+.goods ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.goods li {
+  position: relative;
+  width: 31.62393162393162%;
+  min-height: 620px;
+  min-width: 200px;
+  cursor: pointer;
+}
+
+.goods li:hover {
+  opacity: 0.5;
+}
+
+.goods li::before {
+  opacity: 0.3;
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+}
+
+.production::before {
+  background-image: url("/img/goods_background1_desktop.png");
+}
+
+.mounting::before {
+  background-image: url("/img/goods_background2_desktop.png");
+}
+
+.parts::before {
+  background-image: url("/img/goods_background3_desktop.png");
+}
+
+.goods a {
+  position: relative;
+  display: block;
+  @include roboto-condensed(400);
+  height: 100%;
+  font-size: 20px;
+  line-height: 30px;
+  color: $goods-text;
+  padding-top: 50px;
+}
+
+.goods p {
+  width: 170px;
+  margin-top: 0;
+  margin-left: 44px;
+  opacity: 1;
+}
+
+.goods div {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 63px;
+  height: 63px;
+  background-color: $goods-blocks-arrow-background;
+  background-image: url("/img/arrow.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  color: transparent;
+  font-size: 0;
+}
