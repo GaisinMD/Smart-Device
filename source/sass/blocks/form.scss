@@ -91,8 +91,8 @@
 
   &:hover {
     border: 1px $form-text solid;
-    padding-top: 12px;
     padding-left: 15px;
+    padding-top: 12px;
   }
 
   &::placeholder {
@@ -128,7 +128,7 @@
   }
 }
 
-.form input[name="data"]:checked + label[for="data"]::before {
+.form input[name="data"]:checked+label[for="data"]::before {
   background: url("/img/tick.png") center center no-repeat;
 }
 
@@ -149,5 +149,75 @@
 
   &:hover {
     opacity: 0.5;
+  }
+}
+
+//
+@media (max-width: $tablet-max-width) {
+  .wrapper-form {
+    background-image: none;
+    padding-bottom: 38px;
+  }
+
+  .form picture {
+    display: none;
+  }
+
+  .form {
+    width: 76.953125%;
+    max-width: 750px;
+    min-width: 591px;
+    padding-top: 80px;
+  }
+
+  .form form {
+    width: 100%;
+    min-width: 100%;
+    margin-bottom: 65px;
+  }
+
+  .form h2 {
+    font-size: 32px;
+    line-height: 45px;
+    margin-bottom: 15px;
+  }
+
+  .form p {
+    width: 100%;
+    margin-left: 4px;
+    margin-bottom: 52px;
+  }
+
+  .form form input:not([id="data"]) {
+    padding-left: 20px;
+    margin-bottom: 45px;
+
+    &:hover {
+      margin-bottom: 43px;
+      padding-left: 19px;
+    }
+  }
+
+  .form form textarea {
+    padding-left: 20px;
+    padding-top: 13px;
+    margin-bottom: 49px;
+
+    &:hover {
+      padding-left: 19px;
+      padding-top: 12px;
+    }
+  }
+
+  .form form label[for="data"] {
+    margin-right: 7px;
+    padding-top: 9px;
+    padding-left: 33px;
+  }
+
+  .form .submit-form {
+    margin-left: 2px;
+    width: 280px;
+    height: 47px;
   }
 }

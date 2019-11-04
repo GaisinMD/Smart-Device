@@ -13,7 +13,6 @@ var closeFormButton = form.querySelector('.close-form');
 var popupClass = 'popup';
 var visuallyHiddenClass = 'visually-hidden';
 var mainButtonForForm = document.querySelector('.links-wrapper').querySelector('button');
-var secondButtonForForm = document.querySelector('.promo').querySelector('button');
 
 function setFormContent(header, text) {
   if (formHeader) {
@@ -59,5 +58,4 @@ function activateForm() {
 }
 
 mainButtonForForm.addEventListener('click', activateForm);
-secondButtonForForm.addEventListener('click', activateForm);
 setFormContent(formHeaderContent, formTextContent);
