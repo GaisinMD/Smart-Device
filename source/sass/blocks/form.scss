@@ -1,0 +1,153 @@
+.wrapper-form {
+  background: url("/img/group_of_two_reactangles-form.png");
+  background-position-x: -50%;
+  background-position-y: top;
+  background-repeat: no-repeat;
+  background-color: $form-background;
+  padding-bottom: 38px;
+}
+
+.form {
+  @include margin-auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  width: 60.9375%;
+  max-width: 1500px;
+  min-width: 970px;
+
+  padding-top: 91px;
+}
+
+.form picture {
+  margin-top: 71px;
+  margin-left: -25px;
+}
+
+.form form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  color: $form-text;
+
+  width: 48.71794871794872%;
+  min-width: 545px;
+  margin-bottom: 75px;
+}
+
+.form h2 {
+  @include roboto-condensed(400);
+  font-size: 36px;
+  line-height: 51px;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.form p {
+  @include pt-mono;
+  font-size: 16px;
+  line-height: 22px;
+  margin-top: 0;
+  margin-bottom: 49px;
+}
+
+.form form input:not([id="data"]) {
+  @include pt-mono;
+  font-size: 16px;
+  line-height: 22px;
+  border: none;
+  color: $form-text;
+  background-color: $form-input;
+  padding-left: 16px;
+  height: 52px;
+  width: 47.36842105263158%;
+  margin-bottom: 40px;
+
+  &:hover {
+    border: 1px $form-text solid;
+    margin-bottom: 38px;
+    padding-left: 15px;
+  }
+
+  &::placeholder {
+    color: $form-text;
+  }
+}
+
+.form form textarea {
+  @include pt-mono;
+  width: 100%;
+  border: none;
+  color: $form-text;
+  background-color: $form-input;
+  padding-left: 16px;
+  padding-top: 13px;
+  height: 154px;
+  margin-bottom: 43px;
+
+  &:hover {
+    border: 1px $form-text solid;
+    padding-top: 12px;
+    padding-left: 15px;
+  }
+
+  &::placeholder {
+    color: $form-text;
+  }
+}
+
+.form form label[for="data"] {
+  @include pt-mono;
+  position: relative;
+  font-size: 14px;
+  line-height: 16px;
+  width: 262px;
+  padding-left: 32px;
+  padding-top: 8px;
+  order: 1;
+  opacity: 0.8;
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 16px;
+    height: 16px;
+    left: 0;
+    top: 8px;
+
+    border: 1px solid $form-text;
+    background: none;
+  }
+}
+
+.form input[name="data"]:checked + label[for="data"]::before {
+  background: url("/img/tick.png") center center no-repeat;
+}
+
+.form .submit-form {
+  @include roboto-condensed(700);
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  color: $form-text;
+  text-transform: uppercase;
+  border: 1px $form-text solid;
+  border-radius: 5px;
+  background-color: transparent;
+  cursor: pointer;
+
+  width: 270px;
+  height: 45px;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}

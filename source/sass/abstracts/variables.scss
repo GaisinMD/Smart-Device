@@ -6,6 +6,7 @@ $tablet-max-width: 1023px;
 //color scheme
 $black: #000000;
 $cyan: #00b2ff;
+$light-cyan: #19baff;
 $white: #ffffff;
 $darker-white: #ebebeb;
 $light-grey: #fafafa;
@@ -46,6 +47,10 @@ $goods-background: $dark;
 $goods-text: $white;
 $goods-blocks-background: $dark-light-grey;
 $goods-blocks-arrow-background: $cyan;
+
+$form-background: $cyan;
+$form-text: $white;
+$form-input: $light-cyan;
 
 $footer-background: $light-grey;
 $footer-logo-text: $dark-blue;
