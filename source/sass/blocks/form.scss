@@ -24,6 +24,9 @@
 .form picture {
   margin-top: 71px;
   margin-left: -25px;
+  min-width: 300px;
+  width: 43.67521367521368%;
+  max-width: 550px;
 }
 
 .form form {
@@ -69,8 +72,8 @@
 
   &:hover {
     border: 1px $form-text solid;
-    margin-bottom: 38px;
     padding-left: 15px;
+    margin-bottom: 38px;
   }
 
   &::placeholder {
@@ -82,6 +85,7 @@
   @include pt-mono;
   width: 100%;
   border: none;
+  resize: none;
   color: $form-text;
   background-color: $form-input;
   padding-left: 16px;
@@ -220,4 +224,65 @@
     width: 280px;
     height: 47px;
   }
+}
+
+//
+@media (max-width: $mobile-max-width) {
+  .wrapper-form {
+    padding-bottom: 41px;
+  }
+
+  .form {
+    width: 90.625%;
+    max-width: 550px;
+    min-width: 290px;
+    padding-top: 30px;
+  }
+
+  .form form {
+    margin-bottom: 0;
+  }
+
+  .form h2 {
+    font-size: 28px;
+    line-height: 39px;
+    margin-bottom: 13px;
+  }
+
+  .form p {
+    margin-left: 0;
+    margin-bottom: 24px;
+  }
+
+  .form form input:not([id="data"]) {
+    width: 100%;
+    padding-left: 20px;
+    margin-bottom: 30px;
+
+    &:hover {
+      margin-bottom: 30px;
+    }
+  }
+
+  .form form textarea {
+    height: 104px;
+    padding-left: 15px;
+    padding-top: 15px;
+    margin-bottom: 32px;
+
+    &:hover {
+      padding-left: 14px;
+      padding-top: 14px;
+    }
+  }
+
+  .form .submit-form {
+    @include margin-auto;
+    width: 100%;
+    max-width: 350px;
+    height: 47px;
+    margin-bottom: 23px;
+  }
+
+  .form form label[for="data"] {}
 }

@@ -2,10 +2,12 @@
   @include margin-auto;
   display: flex;
   flex-direction: row;
-  max-width: 1494px;
-  width: 74%;
-  min-width: 1010px;
+  justify-content: space-between;
+  max-width: 1600px;
+  width: 81.5625%;
+  min-width: 1007px;
   padding-top: 170px;
+  overflow: hidden;
 }
 
 .text-block {
@@ -14,7 +16,7 @@
   color: $promo-text;
   padding-top: 56px;
   margin-bottom: 90px;
-  margin-right: 5%;
+  margin-left: 4.6%;
 
   &_slogan {
     @include roboto-condensed(700);
@@ -90,7 +92,7 @@
 
 .promo img {
   min-width: 705px;
-}
+ }
 
 //
 @media (max-width: $tablet-max-width) {
@@ -104,6 +106,7 @@
 
   .text-block {
     padding-top: 75px;
+    margin-left: 0;
     margin-bottom: 70px;
     margin-right: 0;
 
