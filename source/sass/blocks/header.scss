@@ -164,12 +164,12 @@ header button:hover {
     display: none;
   }
 
-  .mailto svg {
+  .mailto img {
     width: 25px;
     height: 19px;
   }
 
-  .phone-number svg {
+  .phone-number img {
     width: 24px;
     height: 24px;
   }
@@ -190,17 +190,14 @@ header button:hover {
   }
 
   header {
-    @include margin-auto;
-    display: flex;
-    flex-direction: row;
     width: 90%;
-    min-width: 90%;
-    margin-left: 17px;
-    margin-right: 0;
+    min-width: 288px;
+    max-width: 450px;
   }
 
-  .logo {
+  .logo img {
     width: 38px;
+    height: 38px;
   }
 
   .name {

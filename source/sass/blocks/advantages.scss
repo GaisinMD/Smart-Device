@@ -145,7 +145,7 @@
   .advantages {
     width: 90.625%;
     min-width: 290px;
-    margin-bottom: 40px;
+    margin-bottom: 32px;
   }
 
   .advantages ul li {
@@ -153,14 +153,25 @@
     min-height: 200px;
     min-width: 290px;
     margin-bottom: 20px;
+    padding-bottom: 23px;
   }
 
   .advantages a {
-    padding-bottom: 30px;
+    padding-left: 26px;
+    padding-bottom: 0;
+  }
+
+  .advantages svg {
+    margin-bottom: 8px;
   }
 
   .advantages h3 {
+    width: 90%;
     font-size: 20px;
     line-height: 28px;
+  }
+
+  .advantages li:nth-child(even) p {
+    width: 97%;
   }
 }
