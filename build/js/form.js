@@ -42,7 +42,7 @@ function onEscPress(evt) {
   if (evt.keyCode === ESC_KEYCODE) {
     deactivateForm();
   }
-};
+}
 
 function hideForm() {
   closeFormButton.addEventListener('click', deactivateForm);

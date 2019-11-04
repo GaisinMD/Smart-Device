@@ -125,6 +125,18 @@
     margin-bottom: 46px;
   }
 
+  .production::before {
+    background-image: url("/img/goods_background1_table.png");
+  }
+
+  .mounting::before {
+    background-image: url("/img/goods_background2_table.png");
+  }
+
+  .parts::before {
+    background-image: url("/img/goods_background3_table.png");
+  }
+
   .goods a {
     padding-top: 39px;
   }
@@ -153,6 +165,18 @@
 
   .goods li {
     margin-bottom: 30px;
+  }
+
+  .production::before {
+    background-image: url("/img/goods_background1_mobile.png");
+  }
+
+  .mounting::before {
+    background-image: url("/img/goods_background2_mobile.png");
+  }
+
+  .parts::before {
+    background-image: url("/img/goods_background3_mobile.png");
   }
 
   .goods a {
