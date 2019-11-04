@@ -33,8 +33,8 @@
 .goods li {
   position: relative;
   width: 31.62393162393162%;
-  min-height: 620px;
   min-width: 200px;
+  min-height: 620px;
   cursor: pointer;
 }
 
@@ -68,9 +68,9 @@
 }
 
 .goods a {
+  @include roboto-condensed(400);
   position: relative;
   display: block;
-  @include roboto-condensed(400);
   height: 100%;
   font-size: 20px;
   line-height: 30px;
@@ -97,4 +97,35 @@
   background-position: center center;
   color: transparent;
   font-size: 0;
+}
+
+//
+@media (max-width: $tablet-max-width) {
+  .wrapper-goods {
+    padding-bottom: 31px;
+  }
+
+  .goods {
+    width: 93.75%;
+    min-width: 720px;
+    padding-top: 23px;
+  }
+
+  .goods h2 {
+    font-size: 32px;
+    line-height: 45px;
+    margin-bottom: 50px;
+    width: 615px;
+  }
+
+  .goods li {
+    width: 100%;
+    min-width: 100%;
+    min-height: 256px;
+    margin-bottom: 46px;
+  }
+
+  .goods a {
+    padding-top: 39px;
+  }
 }
