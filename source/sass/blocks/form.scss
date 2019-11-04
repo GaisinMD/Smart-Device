@@ -1,8 +1,8 @@
 .wrapper-form {
-  background: url("/img/group_of_two_reactangles-form.png");
-  background-position-x: -50%;
-  background-position-y: top;
-  background-repeat: no-repeat;
+  background: url("/img/group_of_two_reactangles_form.png") 15% center no-repeat,
+    url("/img/left_small_reactangle_form.png") 95% top no-repeat,
+    url("/img/right_big_reactangle_form.png") right center no-repeat;
+  background-size: auto, auto, auto;
   background-color: $form-background;
   padding-bottom: 38px;
 }
