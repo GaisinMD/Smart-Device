@@ -27,7 +27,6 @@ function replaceElement(nodeBefore, node, width) {
       nodeBefore.after(node);
     } else {
       if (copyrightYearNew) {
-        console.log("222");
         copyrightYearNew.remove();
       }
     }

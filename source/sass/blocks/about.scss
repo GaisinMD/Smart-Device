@@ -76,12 +76,16 @@
     min-width: 720px;
   }
 
+  .year-wrapper {
+    margin-left: -30px;
+  }
+
   .year-wrapper div {
     font-size: 178px;
   }
 
   .about article {
-    margin-left: 0;
+    margin-left: 12px;
     width: 73.9%;
     min-width: 532px;
   }
@@ -89,11 +93,18 @@
   .about article h2 {
     font-size: 32px;
     line-height: 45px;
+    margin-top: 7px;
     margin-bottom: 24px;
   }
 
+  .about article p {
+    margin-left: 3px;
+    margin-bottom: 20px;
+  }
+
   .about article button {
-    margin-top: 11px;
+    margin-top: 21px;
+    margin-left: 3px;
   }
 }
 
