@@ -15,7 +15,7 @@ var formSubmitContentMobile = 'Отправить';
 var closeFormButton = form.querySelector('.close-form');
 var popupClass = 'popup';
 var visuallyHiddenClass = 'visually-hidden';
-var mainButtonForForm = document.querySelector('.links-wrapper').querySelector('button');
+var mainButtonForForm = document.querySelector('.call-button');
 
 function setFormContent(header, text, button) {
   if (formHeader) {
