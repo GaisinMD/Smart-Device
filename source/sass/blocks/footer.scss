@@ -142,6 +142,7 @@ footer h2 {
 
 .copyright {
   margin-bottom: 14px;
+  // justify-content: space-between;
 }
 
 .copyright a {
@@ -160,7 +161,8 @@ footer h2 {
 }
 
 .copyright_reserved {
-  width: 15.86402266288952%;
+  width: 12.86402266288952%;
+  margin-right: 3%;
   min-width: 160px;
 }
 
@@ -169,10 +171,11 @@ footer h2 {
 }
 
 .copyright_nda {
-  width: 43.98016997167139%;
+  width: 23.98016997167139%;
 }
 
 .copyright_developed {
+  margin-left: auto;
   min-width: 192px;
 }
 
