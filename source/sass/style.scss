@@ -1,12 +1,12 @@
 //
+@import "abstracts/variables";
+@import "abstracts/mixin";
+//
 @import "base/normalize";
 @import "base/base";
 @import "base/fonts";
 //
-@import "abstracts/mixin";
-@import "abstracts/variables";
-//
-@import "layots/body";
+@import "layouts/body";
 //
 @import "blocks/header";
 @import "blocks/promo";
