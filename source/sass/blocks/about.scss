@@ -30,7 +30,7 @@
 .about article {
   margin-left: 2.44100895036615%;
   width: 80%;
-  color: $about-text;
+  color: $dark-grey;
 }
 
 .about h2 {
@@ -56,11 +56,11 @@
   font-size: 14px;
   line-height: 16px;
   letter-spacing: 0.05em;
-  color: $about-button-text;
+  color: $cyan;
   text-transform: uppercase;
-  border: 1px solid $about-button-border;
+  border: 1px solid $cyan;
   border-radius: 5px;
-  background-color: $about-button-background;
+  background-color: $white;
   cursor: pointer;
   margin-top: 15px;
 }

@@ -2,7 +2,7 @@ footer {
   position: relative;
   display: flex;
   flex-direction: column;
-  background-color: $footer-background;
+  background-color: $light-grey;
   padding-top: 65px;
 }
 
@@ -13,7 +13,7 @@ footer::after {
   height: 1px;
   left: 0;
   bottom: 52px;
-  background-color: $footer-line;
+  background-color: $light-dark-grey;
   opacity: 0.2;
 }
 
@@ -23,7 +23,7 @@ footer h2 {
   line-height: 16px;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: $footer-heading;
+  color: $dark;
   margin-top: 0;
   margin-bottom: 25px;
 }
@@ -55,7 +55,7 @@ footer h2 {
 }
 
 .logo-footer .name-firm {
-  color: $footer-logo-text;
+  color: $dark-blue;
 }
 
 .logo-footer .logo {
@@ -63,12 +63,9 @@ footer h2 {
 }
 
 .social ul {
+  @include zero-list;
   display: flex;
   flex-direction: row;
-  list-style: none;
-  padding-left: 0;
-  margin-top: 0;
-  margin-bottom: 0;
 }
 
 .social ul li {
@@ -86,16 +83,13 @@ footer h2 {
 
 .site-sections ul {
   @include pt-mono;
+  @include zero-list;
   font-size: 15px;
   line-height: 25px;
   opacity: 0.5;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  list-style: none;
-  padding-left: 0;
-  margin-top: 0;
-  margin-bottom: 0;
 }
 
 .site-sections ul li:nth-child(odd) {
@@ -105,7 +99,7 @@ footer h2 {
 
 .site-sections ul li a {
   text-decoration: none;
-  color: $footer-main-text;
+  color: $dark;
 }
 
 .site-sections ul li a:hover {
@@ -126,14 +120,14 @@ footer h2 {
   font-size: 15px;
   line-height: 25px;
   opacity: 0.5;
-  color: $footer-main-text;
+  color: $dark;
   margin-top: 0;
   margin-bottom: 0;
 }
 
 .address p a {
   text-decoration: none;
-  color: $footer-main-text;
+  color: $dark;
 }
 
 .address p a:hover {
@@ -154,7 +148,7 @@ footer h2 {
   font-size: 13px;
   line-height: 24px;
   opacity: 0.5;
-  color: $footer-main-text;
+  color: $dark;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   text-decoration: none;
@@ -196,7 +190,7 @@ footer h2 {
     height: 1px;
     left: 0;
     top: 97px;
-    background-color: $footer-line;
+    background-color: $light-dark-grey;
     opacity: 0.2;
   }
 
@@ -243,7 +237,7 @@ footer h2 {
     font-size: 13px;
     line-height: 24px;
     opacity: 0.5;
-    color: $footer-main-text;
+    color: $dark;
     letter-spacing: 0.04em;
     text-transform: uppercase;
     text-decoration: none;
@@ -381,7 +375,7 @@ footer h2 {
     height: 1px;
     left: 0;
     bottom: 0;
-    background-color: $footer-line;
+    background-color: $light-dark-grey;
     opacity: 0.2;
   }
 

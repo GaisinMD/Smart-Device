@@ -1,5 +1,5 @@
 .wrapper-goods {
-  background-color: $goods-background;
+  background-color: $dark;
   padding-bottom: 128px;
 }
 
@@ -16,18 +16,15 @@
   font-size: 36px;
   line-height: 51px;
   margin-bottom: 50px;
-  color: $goods-text;
+  color: $white;
 }
 
 .goods ul {
+  @include zero-list;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-left: 0;
-  list-style: none;
 }
 
 .goods li {
@@ -74,7 +71,7 @@
   height: 100%;
   font-size: 20px;
   line-height: 30px;
-  color: $goods-text;
+  color: $white;
   padding-top: 50px;
 }
 
@@ -91,7 +88,7 @@
   bottom: 0;
   width: 63px;
   height: 63px;
-  background-color: $goods-blocks-arrow-background;
+  background-color: $cyan;
   background-image: url("/img/arrow.png");
   background-repeat: no-repeat;
   background-position: center center;

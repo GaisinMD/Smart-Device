@@ -17,14 +17,11 @@
 }
 
 .advantages ul {
+  @include zero-list;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-left: 0;
-  list-style: none;
 }
 
 .advantages ul li {
@@ -33,8 +30,8 @@
   min-height: 299px;
   min-width: 485px;
   margin-bottom: 30px;
-  border: 1px solid $advantages-block-borders;
-  background-color: $advantages-block-background;
+  border: 1px solid $darker-white;
+  background-color: $white;
 }
 
 .advantages ul li::before {
@@ -44,27 +41,27 @@
   height: 100%;
   left: 0;
   top: 0;
-  background-color: $advantages-block-vertical-line;
+  background-color: $cyan;
 }
 
 .advantages svg {
-  fill: $advantages-block-icon;
+  fill: $cyan;
   margin-bottom: 16px;
 }
 
 .advantages ul li:hover {
-  background-color: $hover-advantages-block-background;
+  background-color: $cyan;
 
   svg {
-    fill: $hover-advantages-block-icon;
+    fill: $white;
   }
 
   h3 {
-    color: $hover-advantages-block-header;
+    color: $white;
   }
 
   p {
-    color: $hover-advantages-block-text;
+    color: $white;
   }
 }
 
@@ -79,7 +76,7 @@
 
 .advantages h3 {
   @include roboto-condensed(400);
-  color: $advantages-block-header;
+  color: $cyan;
   font-size: 24px;
   line-height: 34px;
   width: 93%;
@@ -92,7 +89,7 @@
   width: 93%;
   font-size: 16px;
   line-height: 22px;
-  color: $advantages-block-text;
+  color: $dark-grey;
 }
 
 //

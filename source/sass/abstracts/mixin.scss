@@ -1,28 +1,22 @@
 @mixin roboto-condensed($property) {
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: $property;
-  font-style: normal;
-  font-stretch: normal;
 }
 
 @mixin roboto {
   font-family: "Roboto Medium", "Arial", sans-serif;
   font-weight: 500;
-  font-style: normal;
-  font-stretch: normal;
 }
 
 @mixin pt-mono {
-  font-family: "PT Mono", "Arial", sans-serif;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
+  font-family: "PT Mono", "Courier New", monospace;
 }
 
 @mixin zero-list {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
   list-style: none;
-  padding: 0;
-  margin: 0;
 }
 
 @mixin margin-auto {

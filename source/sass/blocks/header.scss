@@ -3,7 +3,7 @@
   background: url("/img/header_background.png") center top no-repeat,
     url("/img/group_of_two_reactangles.png") center top no-repeat;
   background-size: cover, auto;
-  background-color: $background-color-top-wrapper;
+  background-color: $dark;
 }
 
 header {
@@ -41,7 +41,7 @@ header {
   font-size: 16px;
   line-height: 18px;
   text-decoration: none;
-  color: $header-text;
+  color: $white;
   cursor: pointer;
 }
 
@@ -97,10 +97,10 @@ header {
   font-size: 14px;
   line-height: 16px;
   letter-spacing: 0.05em;
-  color: $header-text;
+  color: $white;
   text-decoration: none;
   text-transform: uppercase;
-  border: 1px solid $border-button-color;
+  border: 1px solid $white;
   border-radius: 5px;
   background-color: transparent;
   cursor: pointer;
@@ -117,7 +117,7 @@ header button:hover {
     background: url("/img/header_background.png") center top no-repeat,
       url("/img/group_of_two_reactangles.png") center -130px no-repeat;
     background-size: auto, cover;
-    background-color: $background-color-top-wrapper;
+    background-color: $dark;
   }
 
   header {
@@ -174,7 +174,7 @@ header button:hover {
     background: url("/img/header_background.png") center top no-repeat,
       url("/img/group_of_two_reactangles.png") center -130px no-repeat;
     background-size: auto, cover;
-    background-color: $background-color-top-wrapper;
+    background-color: $dark;
     min-width: $mobile-min-width;
   }
 
