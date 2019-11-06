@@ -24,39 +24,10 @@ header {
   opacity: 0.5;
 }
 
-.name {
-  margin-left: 16px;
-  cursor: pointer;
-  min-width: 134px;
-
-  &-firm {
-    @include roboto-condensed(700);
-    font-size: 25px;
-    line-height: 29px;
-    color: $header-text;
-
-    margin: 0;
-    margin-top: 6px;
-  }
-
-  &-tagline {
-    @include roboto;
-    font-size: 12px;
-    line-height: 14px;
-    color: $tagline-text;
-
-    margin: 0;
-  }
-}
-
-.name:hover {
-  opacity: 0.5;
-}
-
 .links-wrapper {
   display: flex;
   flex-direction: row;
-  width: 46.70446491849752%;
+  width: 46.8%;
   min-width: 650px;
   margin-left: auto;
 }
@@ -64,6 +35,7 @@ header {
 .mailto,
 .phone-number {
   @include pt-mono;
+  position: relative;
   display: flex;
   align-items: center;
   font-size: 16px;
@@ -73,21 +45,39 @@ header {
   cursor: pointer;
 }
 
+.mailto::before,
+.phone-number::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
 .mailto {
+  padding-left: 39px;
   min-width: 135px;
 }
 
-.mailto span {
-  margin-left: 20px;
+.mailto::before {
+  top: 20px;
+  width: 19px;
+  height: 14px;
+  background-image: url("/img/envelope.png");
 }
 
 .phone-number {
   min-width: 215px;
   margin-left: 13.3535660091047%;
+  padding-left: 34px;
 }
 
-.phone-number span {
-  margin-left: 16px;
+.phone-number::before {
+  top: 16px;
+  width: 18px;
+  height: 18px;
+  background-image: url("/img/phone-call.png");
 }
 
 .mailto:hover,
@@ -134,10 +124,6 @@ header button:hover {
     min-width: 93.75%;
   }
 
-  .name {
-    margin-left: 2.22222222222222%;
-  }
-
   .links-wrapper {
     width: 11.52777777777778%;
     min-width: 11.52777777777778%;
@@ -145,31 +131,29 @@ header button:hover {
 
   .mailto,
   .phone-number {
+    font-size: 0;
+    color: transparent;
     align-items: flex-start;
+    padding-left: 0;
   }
 
   .mailto {
     min-width: 25px;
-    margin-top: 13px;
+  }
+
+  .mailto::before {
+    top: 15px;
+    width: 25px;
+    height: 19px;
   }
 
   .phone-number {
     margin-left: auto;
     min-width: 24px;
-    margin-top: 12px;
   }
 
-  .mailto span,
-  .phone-number span {
-    display: none;
-  }
-
-  .mailto img {
-    width: 25px;
-    height: 19px;
-  }
-
-  .phone-number img {
+  .phone-number::before {
+    top: 12px;
     width: 24px;
     height: 24px;
   }
@@ -200,22 +184,21 @@ header button:hover {
     height: 38px;
   }
 
-  .name {
-    display: none;
-  }
-
   .links-wrapper {
     width: 25.34722222222222%;
     min-width: 25.34722222222222%;
     padding-left: 0;
   }
 
-  .mailto {
-    margin-top: 9px;
+  .mailto::before {
+    top: 8px;
   }
 
   .phone-number {
     margin-left: 30%;
-    margin-top: 5px;
+  }
+
+  .phone-number::before {
+    top: 4px;
   }
 }
