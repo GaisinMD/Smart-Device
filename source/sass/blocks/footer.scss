@@ -305,7 +305,7 @@ footer h2 {
   }
 
   footer::after {
-    bottom: 123px;
+    display: none;
   }
 
   .footer-top,
@@ -315,20 +315,8 @@ footer h2 {
   }
 
   .footer-top {
-    position: relative;
     width: 100%;
     margin-bottom: 0;
-  }
-
-  .footer-top::before {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 1px;
-    left: 0;
-    top: 286px;
-    background-color: $footer-line;
-    opacity: 0.2;
   }
 
   .social {
@@ -374,16 +362,37 @@ footer h2 {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: 90%;
+    width: 100%;
     min-width: 288px;
   }
 
+  .site-sections,
+  .address {
+    position: relative;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .site-sections::after,
+  .address::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 1px;
+    left: 0;
+    bottom: 0;
+    background-color: $footer-line;
+    opacity: 0.2;
+  }
+
   .site-sections {
-    margin-bottom: 31px;
+    padding-bottom: 3px;
+    margin-bottom: 28px;
   }
 
   .site-sections ul {
-    display: none;
+    width: 90%;
+    padding-bottom: 25px;
   }
 
   .site-sections button,
@@ -397,54 +406,23 @@ footer h2 {
     background-color: transparent;
     border: none;
     cursor: pointer;
-  }
-
-  .site-sections button:hover,
-  .address button:hover {
-    opacity: 0.5;
-  }
-
-  .site-sections button::after,
-  .site-sections button::before {
-    position: absolute;
-    content: "";
-    background-color: $footer-icon;
-  }
-
-  .site-sections button::after {
-    width: 100%;
-    height: 1px;
-    top: 8px;
-    left: 0;
-  }
-
-  .site-sections button::before {
-    width: 1px;
-    height: 100%;
-    top: 0;
-    left: 8px;
+    background-image: url("/img/button_section_open.png");
+    background-position: center center;
+    background-repeat: no-repeat;
   }
 
   .address {
-    margin-bottom: 55px;
+    padding-bottom: 27px;
+    margin-bottom: 28px;
   }
 
   .address h2 {
-    margin-bottom: 32px;
+    margin-bottom: 2px;
   }
 
-  .address p {
+  .address div {
+    padding-top: 30px;
     width: 90%;
-  }
-
-  .address button::after {
-    position: absolute;
-    content: "";
-    background-color: $footer-icon;
-    width: 100%;
-    height: 1px;
-    top: 8px;
-    left: 0;
   }
 
   .copyright {
