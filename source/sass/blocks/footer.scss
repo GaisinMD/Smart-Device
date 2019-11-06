@@ -136,6 +136,10 @@ footer h2 {
   color: $footer-main-text;
 }
 
+.address p a:hover {
+  opacity: 0.5;
+}
+
 .address button {
   display: none;
 }
