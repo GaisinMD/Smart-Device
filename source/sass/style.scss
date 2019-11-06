@@ -1,17 +1,17 @@
 //
-@import "base/normalize",
-  "base/base",
-  "base/fonts";
+@import "base/normalize";
+@import "base/base";
+@import "base/fonts";
 //
-@import "abstracts/mixin",
-  "abstracts/variables";
+@import "abstracts/mixin";
+@import "abstracts/variables";
 //
 @import "layots/body";
 //
-@import "blocks/header",
-  "blocks/promo",
-  "blocks/advantages",
-  "blocks/about",
-  "blocks/goods",
-  "blocks/form",
-  "blocks/footer";
+@import "blocks/header";
+@import "blocks/promo";
+@import "blocks/advantages";
+@import "blocks/about";
+@import "blocks/goods";
+@import "blocks/form";
+@import "blocks/footer";
