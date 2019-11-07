@@ -22,34 +22,34 @@
     <include src="build/img/sprite_auto.svg"></include>
   </div>
   <div class="top-wrapper">
-    <header>
-      <a class="logo">
+    <header class="header">
+      <a class="header__logo">
         <picture>
           <source media="(min-width: 768px)" type="image/webp" srcset="/img/logo@1x.webp 1x, img/logo@2x.webp 2x">
           <source media="(min-width: 768px)" srcset="/img/logo@1x.png 1x, img/logo@2x.png 2x">
           <img src="/img/logo_mobile.svg" alt="Логотип компании Smart Device" width="202" height="52">
         </picture>
       </a>
-      <div class="links-wrapper">
-        <a class="mailto" href="mailto:info@sd.ru" aria-label="Электронная почта компании Smart Device">
+      <div class="header__links links">
+        <a class="links__item links__item--mailto" href="mailto:info@sd.ru" aria-label="Электронная почта компании Smart Device">
           info@sd.ru</span>
         </a>
-        <a class="phone-number" href="tel:+7(495)0005252" aria-label="Контактный елефон компании Smart Device">
+        <a class="links__item links__item--phone-number" href="tel:+7(495)0005252" aria-label="Контактный елефон компании Smart Device">
           +7 (495) 000 52 52
         </a>
-        <a class="call-button" href="#"">Заказать звонок</button>
+        <a class="button button--header-call" href="#"">Заказать звонок</button>
       </div>
     </header>
 
-    <section class=" promo">
+    <section class="promo">
           <h2 class="visually-hidden">Промо блок</h2>
-          <div class="text-block">
-            <p class="text-block_slogan">Печатные платы</p>
-            <p class="text-block_text">производство и монтаж, поставка комплектующих, блоков и модулей</p>
-            <button type="button">Получить бесплатную консультацию</button>
-            <a href="#">Скролл вниз</a>
+          <div class="promo-text-block">
+            <p class="promo-text-block__slogan">Печатные платы</p>
+            <p class="promo-text-block__text">производство и монтаж, поставка комплектующих, блоков и модулей</p>
+            <button class="promo-text-block__button" type="button">Получить бесплатную консультацию</button>
+            <a class="promo-text-block__scroll" href="#">Скролл вниз</a>
           </div>
-          <picture>
+          <picture class="promo-picture">
             <source type="image/webp" srcset="/img/electronic_board@1x.webp 1x, img/electronic_board@2x.webp 2x">
             <img src="/img/electronic_board@1x.png" srcset="/img/electronic_board@2x.png 2x"
               alt="Пример нашей продукции: печатная плата" width="705" height="515">
@@ -62,8 +62,8 @@
         <div class="advantages-about-wrapper">
           <section class="advantages">
             <h2 class="visually-hidden">Наши преимущества</h2>
-            <ul>
-              <li>
+            <ul class="advantages-list">
+              <li class="advantages-list__element adavantages-element">
                 <article>
                   <a>
                     <svg height="35" width="29">

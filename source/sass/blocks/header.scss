@@ -1,39 +1,32 @@
-.top-wrapper {
-  padding-top: 33px;
-  background: url("/img/header_background.png") center top no-repeat,
-    url("/img/group_of_two_reactangles.png") center top no-repeat;
-  background-size: cover, auto;
-  background-color: $dark;
-}
-
-header {
+.header {
   @include margin-auto;
   display: flex;
   flex-direction: row;
-  max-width: 1500px;
-  width: 73.48958333333333%;
   min-width: 1004px;
+  width: 73.49%;
+  max-width: 1500px;
 }
 
-.logo {
+.header__logo {
   min-width: 52px;
-  cursor: pointer;
 }
 
-.logo:hover {
+.header__logo:hover {
   opacity: 0.5;
 }
 
-.links-wrapper {
-  display: flex;
-  flex-direction: row;
-  width: 46.8%;
-  min-width: 650px;
+.header__links {
   margin-left: auto;
 }
 
-.mailto,
-.phone-number {
+.links {
+  display: flex;
+  flex-direction: row;
+  min-width: 650px;
+  width: 46.8%;
+}
+
+.links__item {
   @include pt-mono;
   position: relative;
   display: flex;
@@ -42,11 +35,13 @@ header {
   line-height: 18px;
   text-decoration: none;
   color: $white;
-  cursor: pointer;
 }
 
-.mailto::before,
-.phone-number::before {
+.links__item:hover {
+  opacity: 0.5;
+}
+
+.links__item::before {
   position: absolute;
   content: "";
   left: 0;
@@ -55,154 +50,119 @@ header {
   background-repeat: no-repeat;
 }
 
-.mailto {
+.links__item--mailto {
   padding-left: 39px;
   min-width: 135px;
 }
 
-.mailto::before {
+.links__item--mailto::before {
   top: 20px;
   width: 19px;
   height: 14px;
   background-image: url("/img/envelope.png");
 }
 
-.phone-number {
-  min-width: 215px;
-  margin-left: 13.3535660091047%;
+.links__item--phone-number {
+  margin-left: 13.35%;
   padding-left: 34px;
+  min-width: 215px;
 }
 
-.phone-number::before {
+.links__item--phone-number::before {
   top: 16px;
   width: 18px;
   height: 18px;
   background-image: url("/img/phone-call.png");
 }
 
-.mailto:hover,
-.phone-number:hover {
-  opacity: 0.5;
-}
-
-.call-button {
-  @include roboto-condensed(700);
+.button--header-call {
   margin-top: 4px;
   margin-left: 40px;
   margin-bottom: 6px;
+  padding-top: 14px;
   width: 180px;
   min-height: 45px;
-  padding-top: 14px;
-  text-align: center;
   font-size: 14px;
   line-height: 16px;
   letter-spacing: 0.05em;
   color: $white;
-  text-decoration: none;
-  text-transform: uppercase;
   border: 1px solid $white;
-  border-radius: 5px;
   background-color: transparent;
-  cursor: pointer;
-}
-
-header button:hover {
-  opacity: 0.5;
 }
 
 //
 @media (max-width: $tablet-max-width) {
-  .top-wrapper {
-    padding-top: 20px;
-    background: url("/img/header_background.png") center top no-repeat,
-      url("/img/group_of_two_reactangles.png") center -130px no-repeat;
-    background-size: auto, cover;
-    background-color: $dark;
-  }
-
-  header {
+  .header {
     @include margin-auto;
-    display: flex;
-    flex-direction: row;
-    width: 93.75%;
     min-width: 93.75%;
+    width: 93.75%;
   }
 
-  .links-wrapper {
-    width: 11.52777777777778%;
-    min-width: 11.52777777777778%;
+  .links {
+    min-width: 11.53%;
+    width: 11.53%;
   }
 
-  .mailto,
-  .phone-number {
+  .links__item {
     font-size: 0;
     color: transparent;
     align-items: flex-start;
     padding-left: 0;
   }
 
-  .mailto {
+  .links__item--mailto {
     min-width: 25px;
   }
 
-  .mailto::before {
+  .links__item--mailto::before {
     top: 15px;
     width: 25px;
     height: 19px;
   }
 
-  .phone-number {
+  .links__item--phone-number {
     margin-left: auto;
     min-width: 24px;
   }
 
-  .phone-number::before {
+  .links__item--phone-number::before {
     top: 12px;
     width: 24px;
     height: 24px;
   }
 
-  .call-button {
+  .button--header-call {
     display: none;
   }
 }
 
 //
 @media (max-width: $mobile-max-width) {
-  .top-wrapper {
-    padding-top: 17px;
-    background: url("/img/header_background.png") center top no-repeat,
-      url("/img/group_of_two_reactangles.png") center -130px no-repeat;
-    background-size: auto, cover;
-    background-color: $dark;
-    min-width: $mobile-min-width;
-  }
-
-  header {
-    width: 90%;
+  .header {
     min-width: 288px;
+    width: 90%;
   }
 
-  .logo img {
+  .header__logo img {
     width: 38px;
     height: 38px;
   }
 
-  .links-wrapper {
-    width: 25.34722222222222%;
-    min-width: 25.34722222222222%;
+  .links {
     padding-left: 0;
+    min-width: 25.35%;
+    width: 25.35%;
   }
 
-  .mailto::before {
+  .links__item--mailto::before {
     top: 8px;
   }
 
-  .phone-number {
+  .links__item--phone-number {
     margin-left: 30%;
   }
 
-  .phone-number::before {
+  .links__item--phone-number::before {
     top: 4px;
   }
 }
