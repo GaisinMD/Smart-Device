@@ -1,0 +1,16 @@
+.goods-wrapper {
+  background-color: $dark;
+  padding-bottom: 128px;
+}
+
+@media (max-width: $tablet-max-width) {
+  .goods-wrapper {
+    padding-bottom: 31px;
+  }
+}
+
+@media (max-width: $mobile-max-width) {
+  .goods-wrapper {
+    padding-bottom: 20px;
+  }
+}

@@ -1,20 +1,20 @@
 .about {
   @include margin-auto;
-  width: 64%;
-  max-width: 1500px;
-  min-width: 1024px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  max-width: 1500px;
+  width: 64%;
+  min-width: 1024px;
 }
 
 .year-wrapper {
   display: flex;
+  margin-top: 5px;
   background-image: url("/img/electronic_background.png");
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
-  margin-top: 5px;
 }
 
 .year-wrapper div {
@@ -27,13 +27,13 @@
   transform: rotate(180deg);
 }
 
-.about article {
-  margin-left: 2.44100895036615%;
+.about__text {
+  margin-left: 2.44%;
   width: 80%;
   color: $dark-grey;
 }
 
-.about h2 {
+.about__header {
   @include roboto-condensed(400);
   font-size: 36px;
   line-height: 51px;
@@ -41,7 +41,7 @@
   margin-bottom: 20px;
 }
 
-.about p {
+.about__text p {
   @include pt-mono;
   font-size: 16px;
   line-height: 22px;
@@ -49,31 +49,30 @@
   margin-bottom: 23px;
 }
 
-.about button {
-  @include roboto-condensed(700);
-  width: 180px;
-  height: 45px;
+.button--about {
   font-size: 14px;
   line-height: 16px;
   letter-spacing: 0.05em;
   color: $cyan;
   text-transform: uppercase;
+  margin-top: 15px;
+  width: 180px;
+  height: 45px;
   border: 1px solid $cyan;
   border-radius: 5px;
   background-color: $white;
   cursor: pointer;
-  margin-top: 15px;
 }
 
-.about button:hover {
+.about--about:hover {
   opacity: 0.5;
 }
 
 //
 @media (max-width: $tablet-max-width) {
   .about {
-    width: 93.75%;
     min-width: 720px;
+    width: 93.75%;
   }
 
   .year-wrapper {
@@ -84,25 +83,25 @@
     font-size: 178px;
   }
 
-  .about article {
+  .about__text {
     margin-left: 12px;
-    width: 73.9%;
     min-width: 532px;
+    width: 73.9%;
   }
 
-  .about h2 {
+  .about__header {
     font-size: 32px;
     line-height: 45px;
     margin-top: 7px;
     margin-bottom: 24px;
   }
 
-  .about p {
+  .about__text p {
     margin-left: 3px;
     margin-bottom: 20px;
   }
 
-  .about button {
+  .about__button {
     margin-top: 21px;
     margin-left: 3px;
   }
@@ -111,38 +110,38 @@
 //
 @media (max-width: $mobile-max-width) {
   .about {
-    width: 90.625%;
-    min-width: 290px;
     padding-bottom: 25px;
+    min-width: 290px;
+    width: 90.625%;
   }
 
   .year-wrapper {
     display: none;
   }
 
-  .about article {
-    width: 90.625%;
-    min-width: 290px;
+  .about__text {
     margin-left: 0;
     margin-bottom: 40px;
+    min-width: 290px;
+    width: 90.625%;
   }
 
-  .about h2 {
+  .about__heaser {
     font-size: 28px;
     line-height: 45px;
     margin-bottom: 19px;
   }
 
-  .about p {
+  .about__text p {
     margin-left: 2px;
     margin-bottom: 40px;
   }
 
-  .about p:last-of-type {
+  .about__text p:last-of-type {
     margin-bottom: 17px;
   }
 
-  .about button {
+  .about__button {
     margin-top: 10px;
   }
 }

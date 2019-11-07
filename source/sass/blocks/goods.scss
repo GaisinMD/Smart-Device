@@ -1,7 +1,4 @@
-.wrapper-goods {
-  background-color: $dark;
-  padding-bottom: 128px;
-}
+
 
 .goods {
   @include margin-auto;
@@ -98,10 +95,6 @@
 
 //
 @media (max-width: $tablet-max-width) {
-  .wrapper-goods {
-    padding-bottom: 31px;
-  }
-
   .goods {
     width: 93.75%;
     min-width: 720px;
