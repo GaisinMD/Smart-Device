@@ -1,22 +1,12 @@
-.advantages-about-wrapper {
-  padding-top: 109px;
-  background: url("/img/left_small_reactangle.png") 15% 5% no-repeat,
-    url("/img/right_big_reactangle.png") center center no-repeat,
-    url("/img/left_big_reactangle.png") -5% 100% no-repeat,
-    url("/img/right_small_reactangle.png") 95% center no-repeat;
-  background-size: auto, auto, auto, auto;
-  padding-bottom: 98px;
-}
-
 .advantages {
   @include margin-auto;
-  width: 60.9375%;
-  max-width: 1500px;
-  min-width: 970px;
   margin-bottom: 75px;
+  min-width: 970px;
+  width: 60.94%;
+  max-width: 1500px;
 }
 
-.advantages ul {
+.advantages-list {
   @include zero-list;
   display: flex;
   flex-direction: row;
@@ -24,151 +14,144 @@
   justify-content: space-between;
 }
 
-.advantages ul li {
-  position: relative;
-  width: 48.71794871794872%;
-  min-height: 299px;
-  min-width: 485px;
+.advantages-list__element {
   margin-bottom: 30px;
+}
+
+.advantages-element {
+  position: relative;
+  min-width: 485px;
+  width: 48.72%;
+  min-height: 299px;
   border: 1px solid $darker-white;
   background-color: $white;
 }
 
-.advantages ul li::before {
-  position: absolute;
-  content: "";
-  width: 3px;
-  height: 100%;
-  left: 0;
-  top: 0;
-  background-color: $cyan;
-}
-
-.advantages svg {
-  fill: $cyan;
-  margin-bottom: 16px;
-}
-
-.advantages ul li:hover {
+.advantages-element:hover {
   background-color: $cyan;
 
   svg {
     fill: $white;
   }
 
-  h3 {
+  .advantages-element__header {
     color: $white;
   }
 
-  p {
+  .advantages-element__text {
     color: $white;
   }
 }
 
-.advantages a {
+.advantages-element::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  width: 3px;
+  height: 100%;
+  background-color: $cyan;
+}
+
+.advantages-element svg {
+  margin-bottom: 16px;
+  fill: $cyan;
+}
+
+.advantages-element a {
   display: block;
   text-decoration: none;
-  width: 100%;
-  height: 100%;
   padding-left: 43px;
   padding-top: 40px;
+  width: 100%;
+  height: 100%;
 }
 
-.advantages h3 {
+.advantages-element__header {
   @include roboto-condensed(400);
-  color: $cyan;
   font-size: 24px;
   line-height: 34px;
-  width: 93%;
+  color: $cyan;
   margin-top: 0;
   margin-bottom: 15px;
+  width: 93%;
 }
 
-.advantages p {
+.advantages-element__text {
   @include pt-mono;
-  width: 93%;
   font-size: 16px;
   line-height: 22px;
   color: $dark-grey;
+  width: 93%;
 }
 
 //
 @media (max-width: $tablet-max-width) {
-  .advantages-about-wrapper {
-    padding-top: 54px;
-    padding-bottom: 76px;
-  }
-
   .advantages {
+    margin-bottom: 20px;
     width: 93.75%;
     min-width: 720px;
-    margin-bottom: 20px;
   }
 
-  .advantages ul li {
+  .advantages-element {
+    padding-bottom: 19px;
+    min-width: 345px;
     width: 345px;
     min-height: 232px;
-    min-width: 345px;
-    margin-bottom: 30px;
-    padding-bottom: 19px;
   }
 
-  .advantages svg {
-    margin-bottom: 2px;
-  }
-
-  .advantages a {
+  .advantages-element a {
     padding-left: 28px;
     padding-top: 25px;
   }
 
-  .advantages h3 {
-    width: 100%;
-    margin-bottom: 10px;
+  .advantages-element svg {
+    margin-bottom: 2px;
   }
 
-  .advantages p {
+
+  .advantages-element__header {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+
+  .advantages-element__text {
     margin-top: 0;
   }
 }
 
 //
 @media (max-width: $mobile-max-width) {
-  .advantages-about-wrapper {
-    padding-top: 37px;
-    padding-bottom: 0;
-  }
-
   .advantages {
+    margin-bottom: 32px;
     width: 90.625%;
     min-width: 290px;
-    margin-bottom: 32px;
   }
 
-  .advantages ul li {
-    width: 100%;
-    min-height: 200px;
-    min-width: 290px;
+  .advantages-element {
     margin-bottom: 20px;
     padding-bottom: 23px;
+    width: 100%;
+    min-width: 290px;
+    min-height: 200px;
   }
 
-  .advantages a {
+  .advantages-element a {
     padding-left: 26px;
     padding-bottom: 0;
   }
 
-  .advantages svg {
+  .advantages-element svg {
     margin-bottom: 8px;
   }
 
-  .advantages h3 {
-    width: 90%;
+  .advantages-element__header {
     font-size: 20px;
     line-height: 28px;
+    width: 90%;
   }
 
-  .advantages li:nth-child(even) p {
+  .advantages-element:nth-child(even) .advantages-element__text {
     width: 97%;
   }
 }
