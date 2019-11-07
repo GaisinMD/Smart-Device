@@ -1,4 +1,4 @@
-footer {
+.footer {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -6,18 +6,18 @@ footer {
   padding-top: 65px;
 }
 
-footer::after {
+.footer::after {
   position: absolute;
   content: "";
-  width: 100%;
-  height: 1px;
   left: 0;
   bottom: 52px;
+  width: 100%;
+  height: 1px;
   background-color: $light-dark-grey;
   opacity: 0.2;
 }
 
-footer h2 {
+.footer h2 {
   @include roboto-condensed(400);
   font-size: 15px;
   line-height: 16px;
@@ -28,14 +28,13 @@ footer h2 {
   margin-bottom: 25px;
 }
 
-.footer-top,
-.copyright {
+.footer--wrapper {
   @include margin-auto;
   display: flex;
   flex-direction: row;
-  max-width: 1500px;
-  width: 73.54166666666667%;
   min-width: 1004px;
+  width: 73.54%;
+  max-width: 1500px;
 }
 
 .footer-top {
@@ -43,45 +42,37 @@ footer h2 {
 }
 
 .social {
-  width: 29.85%;
   min-width: 226px;
+  width: 29.85%;
 }
 
-.logo-footer {
+.social__logo-footer {
   display: flex;
   flex-direction: row;
   margin-bottom: 50px;
   padding-right: 10px;
 }
 
-.logo-footer .name-firm {
-  color: $dark-blue;
-}
-
-.logo-footer .logo {
-  margin-left: 0;
-}
-
-.social ul {
+.list-icons {
   @include zero-list;
   display: flex;
   flex-direction: row;
 }
 
-.social ul li {
+.list-icons__item {
   margin-right: 16px;
-}
 
-.social ul li:hover {
-  opacity: 0.5;
+  &:hover {
+    opacity: 0.5;
+  }
 }
 
 .site-sections {
-  width: 46.53%;
   min-width: 440px;
+  width: 46.53%;
 }
 
-.site-sections ul {
+.list-sections {
   @include pt-mono;
   @include zero-list;
   font-size: 15px;
@@ -92,30 +83,30 @@ footer h2 {
   flex-wrap: wrap;
 }
 
-.site-sections ul li:nth-child(odd) {
-  min-width: 243px;
+.list-sections__item:nth-child(odd) {
   margin-right: 65px;
+  min-width: 243px;
 }
 
-.site-sections ul li a {
+.list-sections__item a {
   text-decoration: none;
   color: $dark;
+
+  &:hover {
+    opacity: 0.25;
+  }
 }
 
-.site-sections ul li a:hover {
-  opacity: 0.25;
-}
-
-.site-sections button {
+.footer--toggle {
   display: none;
 }
 
 .address {
-  width: 22.9%;
   min-width: 333px;
+  width: 22.9%;
 }
 
-.address p {
+.address__text p {
   @include pt-mono;
   font-size: 15px;
   line-height: 25px;
@@ -125,25 +116,20 @@ footer h2 {
   margin-bottom: 0;
 }
 
-.address p a {
+.address__text p a {
   text-decoration: none;
   color: $dark;
 }
 
-.address p a:hover {
+.address__text p a:hover {
   opacity: 0.5;
-}
-
-.address button {
-  display: none;
 }
 
 .copyright {
   margin-bottom: 14px;
-  // justify-content: space-between;
 }
 
-.copyright a {
+.copyright__item {
   @include pt-mono;
   font-size: 13px;
   line-height: 24px;
@@ -152,56 +138,55 @@ footer h2 {
   letter-spacing: 0.04em;
   text-transform: uppercase;
   text-decoration: none;
-}
 
-.copyright a:hover {
-  opacity: 0.25;
-}
+  &:hover {
+    opacity: 0.25;
+  }
 
-.copyright_reserved {
-  width: 12.86402266288952%;
-  margin-right: 3%;
-  min-width: 160px;
-}
+  &--reserved {
+    margin-right: 3%;
+    min-width: 160px;
+    width: 12.86%;
+  }
 
-.copyright_year {
-  width: 26.55807365439093%;
-}
+  &--year {
+    width: 26.56%;
+  }
 
-.copyright_nda {
-  width: 23.98016997167139%;
-}
+  &--nda {
+    width: 23.98%;
+  }
 
-.copyright_developed {
-  margin-left: auto;
-  min-width: 192px;
+  &--developed {
+    margin-left: auto;
+    min-width: 192px;
+  }
 }
 
 //
 @media (max-width: $tablet-max-width) {
-  footer {
+  .footer {
     padding-top: 19px;
   }
 
-  footer::before {
+  .footer::before {
     position: absolute;
     content: "";
-    width: 100%;
-    height: 1px;
     left: 0;
     top: 97px;
+    width: 100%;
+    height: 1px;
     background-color: $light-dark-grey;
     opacity: 0.2;
   }
 
-  footer::after {
+  .footer::after {
     bottom: 59px;
   }
 
-  .footer-top,
-  .copyright {
-    min-width: 718px;
+  .footer--wrapper {
     flex-wrap: wrap;
+    min-width: 718px;
   }
 
   .footer-top {
@@ -209,108 +194,102 @@ footer h2 {
   }
 
   .social {
-    width: 100%;
-    min-width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding-bottom: 26px;
     margin-bottom: 35px;
+    padding-bottom: 26px;
+    min-width: 100%;
+    width: 100%;
   }
 
-  .logo-footer {
-    padding-right: 0;
+  .social__logo-footer {
     margin-bottom: 0;
+    padding-right: 0;
   }
 
-  .logo-footer .name {
-    margin-left: 16px;
-  }
-
-  .logo-footer .name-firm {
-    min-width: 148px;
-  }
-
-  .social .copyright_year {
+  .copyright__item--year {
     @include pt-mono;
     display: block;
     font-size: 13px;
     line-height: 24px;
     opacity: 0.5;
-    color: $dark;
     letter-spacing: 0.04em;
+    color: $dark;
     text-transform: uppercase;
     text-decoration: none;
     min-width: 233px;
-    margin-left: 12.11699164345404%;
+    margin-left: 12.12%;
     align-self: center;
   }
 
-  .social ul {
-    margin-left: 7.93871866295265%;
+  .list-icons {
     align-items: center;
+    margin-left: 7.94%;
   }
 
-  .social ul li {
+  .list-icons__item {
     margin-left: 16px;
     margin-right: 0;
   }
 
   .site-sections {
-    width: 33.84401114206128%;
     min-width: 243px;
+    width: 33.84%;
   }
 
-  .site-sections ul {
+  .list-sections {
     flex-direction: column;
   }
 
-  .site-sections ul li:nth-child(even) {
+  .list-sections__item:nth-child(even) {
     order: 1;
   }
 
   .address {
-    width: 22.9%;
+    margin-left: 18.38%;
     min-width: 333px;
-    margin-left: 18.38440111420613%;
+    width: 22.9%;
   }
 
-  .copyright_reserved {
+  .copyright__item--nda {
+    width: 40%;
+  }
+
+  .copyright__item--reserved {
     display: none;
   }
 
-  .copyright_year {
+  .copyright__item + .copyright__item--year {
     display: none;
   }
 
-  .copyright_developed {
+  .copyright__item--developed {
     margin-left: auto;
   }
 }
 
 //
 @media (max-width: $mobile-max-width) {
-  footer {
+  .footer {
     padding-top: 46px;
   }
 
-  footer::before {
+  .footer::before {
     top: 259px;
   }
 
-  footer::after {
+  .footer::after {
     display: none;
   }
 
-  .footer-top,
-  .copyright {
+  .footer--wrapper {
     min-width: 320px;
-    flex-wrap: wrap;
   }
 
   .footer-top {
-    width: 100%;
     margin-bottom: 0;
+    width: 100%;
   }
 
   .social {
@@ -318,25 +297,25 @@ footer h2 {
     margin-bottom: 52px;
   }
 
-  .logo-footer {
+  .social__logo-footer {
     @include margin-auto;
-    width: 216px;
     margin-bottom: 22px;
+    width: 216px;
   }
 
-  .social .copyright_year {
+  .copyright__item--year {
     margin-left: 0;
     margin-bottom: 32px;
   }
 
-  .social ul {
+  .list-icons {
     @include margin-auto;
     justify-content: space-around;
-    width: 35.3125%;
     min-width: 113px;
+    width: 35.3125%;
   }
 
-  .social ul li:first-child {
+  .list-icons__item:first-child {
     margin-left: 0;
   }
 
@@ -348,8 +327,8 @@ footer h2 {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: 100%;
     min-width: 288px;
+    width: 100%;
   }
 
   .site-sections,
@@ -376,15 +355,14 @@ footer h2 {
     margin-bottom: 28px;
   }
 
-  .site-sections ul {
-    width: 90%;
+  .list-sections {
     padding-bottom: 25px;
+    width: 90%;
   }
 
-  .site-sections button,
-  .address button {
-    position: relative;
+  .footer--toggle {
     display: block;
+    position: relative;
     width: 16px;
     height: 16px;
     font-size: 0;
@@ -398,15 +376,15 @@ footer h2 {
   }
 
   .address {
-    padding-bottom: 27px;
     margin-bottom: 28px;
+    padding-bottom: 27px;
   }
 
   .address h2 {
     margin-bottom: 2px;
   }
 
-  .address div {
+  .address__text {
     padding-top: 30px;
     width: 90%;
   }
@@ -415,9 +393,9 @@ footer h2 {
     margin-bottom: 5px;
   }
 
-  .copyright a {
-    width: 100%;
+  .copyright__item {
     text-align: center;
     margin-bottom: 21px;
+    width: 100%;
   }
 }

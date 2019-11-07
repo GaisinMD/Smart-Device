@@ -43,7 +43,7 @@
       </div>
     </header>
 
-    <section class=" promo">
+    <section class="promo">
           <h2 class="visually-hidden">Промо блок</h2>
           <div class="promo-text-block">
             <h1 class="promo-text-block__header">Печатные платы</h1>
@@ -180,33 +180,33 @@
         </div>
       </main>
 
-      <footer>
-        <div class="footer-top">
+      <footer class="footer">
+        <div class="footer--wrapper footer-top">
           <section class="social">
             <h2 class="visually-hidden">Логотип и ссылки на соцсети</h2>
-            <a class="logo-footer">
+            <a class="social__logo-footer">
               <picture>
                 <source type="image/webp" srcset="/img/logo_footer@1x.webp 1x, img/logo_footer@2x.webp 2x">
                 <img src="/img/logo_footer@1x.png" srcset="/img/logo_footer@2x.png 2x"
                   alt="Логотип компании Smart Device" width="216" height="52">
               </picture>
             </a>
-            <ul>
-              <li>
+            <ul class="social__list list-icons">
+              <li class="list-icons__item">
                 <a href="#" aria-label="Переход на наш аккаунт в Фейсбуке">
                   <svg height="27" width="27">
                     <use xlink:href="#social_facebook"></use>
                   </svg>
                 </a>
               </li>
-              <li>
+              <li class="list-icons__item">
                 <a href="#" aria-label="Переход на наш аккаунт в Однокласниках">
                   <svg height="27" width="27">
                     <use xlink:href="#social_ok"></use>
                   </svg>
                 </a>
               </li>
-              <li>
+              <li class="list-icons__item">
                 <a href="#" aria-label="Переход на наш аккаунт в Вконтакте">
                   <svg height="27" width="27">
                     <use xlink:href="#social_vk"></use>
@@ -217,21 +217,21 @@
           </section>
           <section class="site-sections">
             <h2>Разделы сайта</h2>
-            <button id='sections' type="button">Раскрыть раздел</button>
-            <ul>
-              <li><a href="#">О компании</a></li>
-              <li><a href="#">Комплектующие</a></li>
-              <li><a href="#">Продукты</a></li>
-              <li><a href="#">Доставка</a></li>
-              <li><a href="#">Производство печатных плат</a></li>
-              <li><a href="#">Контакты</a></li>
-              <li><a href="#">Монтаж печатных плат</a></li>
+            <button class="footer--toggle" id='sections' type="button">Раскрыть раздел</button>
+            <ul class="site-sections__list list-sections">
+              <li class="list-sections__item"><a href="#">О компании</a></li>
+              <li class="list-sections__item"><a href="#">Комплектующие</a></li>
+              <li class="list-sections__item"><a href="#">Продукты</a></li>
+              <li class="list-sections__item"><a href="#">Доставка</a></li>
+              <li class="list-sections__item"><a href="#">Производство печатных плат</a></li>
+              <li class="list-sections__item"><a href="#">Контакты</a></li>
+              <li class="list-sections__item"><a href="#">Монтаж печатных плат</a></li>
             </ul>
           </section>
           <section class="address">
             <h2>Наш офис</h2>
-            <button id='address' type="button">Раскрыть раздел</button>
-            <div>
+            <button class="footer--toggle" id='address' type="button">Раскрыть раздел</button>
+            <div class="address__text">
               <p>г. Мытищи, Олимпийский проспект, д.10</p>
               <p><a href="tel:+7(495)5894050">+7 (495) 589-40-50</a></p>
               <p><a href="tel:+7(495)0038767">+7 (925) 003-87-67</a></p>
@@ -240,11 +240,11 @@
           </section>
         </div>
 
-        <section class="copyright">
-          <a href="#" class="copyright_reserved">Все права защищены</a>
-          <a href="#" class="copyright_year">1999-2018 SD Service Devices</a>
-          <a href="#" class="copyright_nda">Условия конфиденциальности</a>
-          <a href="#" class="copyright_developed">Developed by wow studio</a>
+        <section class="footer--wrapper copyright">
+          <a href="#" class="copyright__item copyright__item--reserved">Все права защищены</a>
+          <a href="#" class="copyright__item copyright__item--year">1999-2018 SD Service Devices</a>
+          <a href="#" class="copyright__item copyright__item--nda">Условия конфиденциальности</a>
+          <a href="#" class="copyright__item copyright__item--developed">Developed by wow studio</a>
         </section>
       </footer>
       <script src="js/script.js"></script>

@@ -4,23 +4,27 @@ var hideClass = 'visually-hidden';
 
 var mobileMaxWidth = 768;
 var tabletMaxWidth = 1024;
-var textAbout = document.querySelector('.about').querySelectorAll('p')[1];
-var button = document.querySelector('.promo').querySelector('button');
+
+var button = document.querySelector('.button--promo');
 var mobileButtonText = 'Бесплатная консультация';
 var buttonText = 'Получить бесплатную консультацию';
+
+var textAbout = document.querySelector('.about__text').querySelectorAll('p')[1];
 var mobileAboutText = 'Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог..';
 var aboutText = 'Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.';
-var copyrightYear = document.querySelector('.copyright_year').cloneNode(true);
-var logoFooter = document.querySelector('.logo-footer');
+
+var logoFooter = document.querySelector('.social__logo-footer');
 
 var buttonSections = document.querySelector('#sections');
 var buttonAddress = document.querySelector('#address');
-
 var buttonBackgroundOpen = 'url("/img/button_section_open.png")';
 var buttonBackgroundClose = 'url("/img/button_section_close.png")';
 
-var siteSections = document.querySelector('.site-sections').querySelector('ul');
-var address = document.querySelector('.address').querySelector('div');
+var siteSections = document.querySelector('.list-sections');
+var address = document.querySelector('.address__text');
+
+var copyrightYear = document.querySelector('.copyright__item--year').cloneNode(true);
+
 
 function toggleSection(section, buttonClose) {
   if (section) {
