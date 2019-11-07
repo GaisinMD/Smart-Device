@@ -1,18 +1,18 @@
 'use strict';
 
 var ESC_KEYCODE = 27;
-var form = document.querySelector('.wrapper-form');
-var nameFocus = form.querySelector('input[name=name]');
-var formHeader = form.querySelector('h2');
-var formText = form.querySelector('p');
-var formSubmit = form.querySelector('.submit-form');
+var form = document.querySelector('.form-wrapper');
+var nameFocus = form.querySelector('input[name="name"]');
+var formHeader = form.querySelector('.feedback-form__header');
+var formText = form.querySelector('.feedback-form__text');
+var formSubmit = form.querySelector('.button--feedback-form-submit');
 var formHeaderContent = 'Остались вопросы? Задайте их нам!';
 var formTextContent = 'Мы проконсультируем Вас бесплатно';
 var formSubmitContent = 'Задать вопрос';
 var formHeaderContentMobile = 'Закажите звонок';
 var formTextContentMobile = 'Оставьте контакты, мы проконсультируем вас бесплатно в удобное время';
 var formSubmitContentMobile = 'Отправить';
-var closeFormButton = form.querySelector('.close-form');
+var closeFormButton = form.querySelector('.button--feedback-form-close');
 var popupClass = 'popup';
 var visuallyHiddenClass = 'visually-hidden';
 var mainButtonForForm = document.querySelector('.button--header-call');

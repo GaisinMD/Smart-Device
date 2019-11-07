@@ -164,22 +164,22 @@
             </ul>
           </section>
         </div>
-        <div class="wrapper-form">
+        <div class="form-wrapper">
           <section class="form">
             <picture>
               <source type="image/webp" srcset="/img/paper_airplane@1x.webp 1x, img/paper_airplane@2x.webp 2x">
               <img src="/img/paper_airplane@1x.png" srcset="/img/paper_airplane@2x.png 2x" alt="Бумажный самолетик" width="511" height="288">
             </picture>
-            <form action="">
-              <h2>Остались вопросы? Задайте их нам!</h2>
-              <p>Мы проконсультируем Вас бесплатно</p>
+            <form class="feedback-form" action="">
+              <h2 class="feedback-form__header">Остались вопросы? Задайте их нам!</h2>
+              <p class="feedback-form__text">Мы проконсультируем Вас бесплатно</p>
               <input name="name" type="text" placeholder="Имя" required="">
               <input name="phone" type="tel" placeholder="Телефон" required="">
               <textarea name="message" placeholder="Ваш вопрос" required=""></textarea>
-              <input id="data" name="data" type="checkbox" class="visually-hidden" checked="">
+              <input name="data" id="data" type="checkbox" class="visually-hidden" checked="" required="">
               <label for="data">Я согласен на обработку персональных данных</label>
-              <button class="submit-form" type="submit">Задать вопрос</button>
-              <button class="close-form visually-hidden" type="button">Закрыть форму</button>
+              <button class="button button--feedback-form-submit" type="submit">Задать вопрос</button>
+              <button class="button button--feedback-form-close visually-hidden" type="button">Закрыть форму</button>
             </form>
           </section>
         </div>

@@ -1,48 +1,35 @@
-.wrapper-form {
-  background: url("/img/group_of_two_reactangles_form.png") 15% center no-repeat,
-    url("/img/left_small_reactangle_form.png") 95% top no-repeat,
-    url("/img/right_big_reactangle_form.png") right center no-repeat;
-  background-size: auto, auto, auto;
-  background-color: $cyan;
-  padding-bottom: 38px;
-}
-
 .form {
   @include margin-auto;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-
-  width: 60.9375%;
-  max-width: 1500px;
-  min-width: 970px;
-
   padding-top: 91px;
+  min-width: 970px;
+  width: 60.94%;
+  max-width: 1500px;
 }
 
 .form picture {
-  margin-top: 71px;
   margin-left: -25px;
+  margin-top: 71px;
   min-width: 300px;
-  width: 43.67521367521368%;
+  width: 43.68%;
   max-width: 550px;
 }
 
-.form form {
+.feedback-form {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-
   color: $white;
-
-  width: 48.71794871794872%;
   min-width: 545px;
+  width: 48.72%;
   margin-bottom: 75px;
 }
 
-.form h2 {
+.feedback-form__header {
   @include roboto-condensed(400);
   font-size: 36px;
   line-height: 51px;
@@ -50,7 +37,7 @@
   margin-bottom: 10px;
 }
 
-.form p {
+.feedback-form__text {
   @include pt-mono;
   font-size: 16px;
   line-height: 22px;
@@ -58,22 +45,22 @@
   margin-bottom: 49px;
 }
 
-.form form input:not([id="data"]) {
+.feedback-form input:not([name="data"]) {
   @include pt-mono;
   font-size: 16px;
   line-height: 22px;
   border: none;
   color: $white;
   background-color: $light-cyan;
-  padding-left: 16px;
-  height: 52px;
-  width: 47.36842105263158%;
   margin-bottom: 40px;
+  padding-left: 16px;
+  width: 47.37%;
+  height: 52px;
 
   &:hover {
-    border: 1px $white solid;
-    padding-left: 15px;
     margin-bottom: 38px;
+    padding-left: 15px;
+    border: 1px $white solid;
   }
 
   &::placeholder {
@@ -81,17 +68,17 @@
   }
 }
 
-.form form textarea {
+.feedback-form textarea {
   @include pt-mono;
   width: 100%;
   border: none;
   resize: none;
   color: $white;
   background-color: $light-cyan;
+  margin-bottom: 43px;
   padding-left: 16px;
   padding-top: 13px;
   height: 154px;
-  margin-bottom: 43px;
 
   &:hover {
     border: 1px $white solid;
@@ -104,14 +91,14 @@
   }
 }
 
-.form form label[for="data"] {
+.feedback-form label[for="data"] {
   @include pt-mono;
   position: relative;
   font-size: 14px;
   line-height: 16px;
-  width: 262px;
   padding-left: 32px;
   padding-top: 8px;
+  width: 262px;
   order: 1;
   opacity: 0.8;
 
@@ -122,79 +109,66 @@
   &::before {
     position: absolute;
     content: "";
-    width: 16px;
-    height: 16px;
     left: 0;
     top: 8px;
-
+    width: 16px;
+    height: 16px;
     border: 1px solid $white;
     background: none;
   }
 }
 
-.form input[name="data"]:checked + label[for="data"]::before {
+.feedback-form input[name="data"]:checked + label[for="data"]::before {
   background: url("/img/tick.png") center center no-repeat;
 }
 
-.form .submit-form {
-  @include roboto-condensed(700);
+.button--feedback-form-submit {
   font-size: 14px;
   line-height: 16px;
   letter-spacing: 0.05em;
   color: $white;
   text-transform: uppercase;
   border: 1px $white solid;
-  border-radius: 5px;
   background-color: transparent;
   cursor: pointer;
-
   width: 270px;
   height: 45px;
-
-  &:hover {
-    opacity: 0.5;
-  }
 }
 
 //
 @media (max-width: $tablet-max-width) {
-  .wrapper-form {
-    background-image: none;
-    padding-bottom: 38px;
+  .form {
+    padding-top: 80px;
+    min-width: 591px;
+    width: 76.95%;
+    max-width: 750px;
   }
 
   .form picture {
     display: none;
   }
 
-  .form {
-    width: 76.953125%;
-    max-width: 750px;
-    min-width: 591px;
-    padding-top: 80px;
-  }
-
-  .form form {
-    width: 100%;
-    min-width: 100%;
+  .feedback-form {
     margin-bottom: 65px;
+    min-width: 100%;
+    width: 100%;
   }
 
-  .form h2 {
+  .feedback-form__header {
     font-size: 32px;
     line-height: 45px;
     margin-bottom: 15px;
   }
 
-  .form p {
-    width: 100%;
+  .feedback-form__text {
     margin-left: 4px;
     margin-bottom: 52px;
+    width: 100%;
   }
 
-  .form form input:not([id="data"]) {
-    padding-left: 20px;
+  .feedback-form input:not([id="data"]) {
     margin-bottom: 45px;
+    padding-left: 20px;
 
     &:hover {
       margin-bottom: 43px;
@@ -202,10 +176,10 @@
     }
   }
 
-  .form form textarea {
+  .feedback-form textarea {
+    margin-bottom: 49px;
     padding-left: 20px;
     padding-top: 13px;
-    margin-bottom: 49px;
 
     &:hover {
       padding-left: 19px;
@@ -213,13 +187,13 @@
     }
   }
 
-  .form form label[for="data"] {
+  .feedback-form label[for="data"] {
     margin-right: 7px;
     padding-top: 9px;
     padding-left: 33px;
   }
 
-  .form .submit-form {
+  .button--feedback-form-submit {
     margin-left: 2px;
     width: 280px;
     height: 47px;
@@ -228,47 +202,42 @@
 
 //
 @media (max-width: $mobile-max-width) {
-  .wrapper-form {
-    padding-bottom: 41px;
-  }
-
   .form {
-    width: 90.625%;
-    max-width: 550px;
-    min-width: 290px;
     padding-top: 30px;
+    min-width: 290px;
+    width: 90.635%;
+    max-width: 550px;
   }
 
-  .form form {
+  .feedback-form {
     margin-bottom: 0;
   }
 
-  .form h2 {
+  .feedback-form__header {
     font-size: 28px;
     line-height: 39px;
     margin-bottom: 13px;
   }
 
-  .form p {
+  .feedback-form__text {
     margin-left: 0;
     margin-bottom: 24px;
   }
 
-  .form form input:not([id="data"]) {
-    width: 100%;
-    padding-left: 20px;
+  .feedback-form input:not([id="data"]) {
     margin-bottom: 30px;
+    width: 100%;
 
     &:hover {
       margin-bottom: 30px;
     }
   }
 
-  .form form textarea {
-    height: 104px;
+  .feedback-form textarea {
+    margin-bottom: 32px;
     padding-left: 15px;
     padding-top: 15px;
-    margin-bottom: 32px;
+    height: 104px;
 
     &:hover {
       padding-left: 14px;
@@ -276,7 +245,7 @@
     }
   }
 
-  .form .submit-form {
+  .button--feedback-form-submit {
     @include margin-auto;
     width: 100%;
     max-width: 350px;
@@ -296,65 +265,57 @@
 
   .form {
     position: fixed;
-    top: 136px;
+    top: calc(50% - 302px);
     left: calc(50% - 245px);
-    width: 490px;
+    padding-top: 0;
     min-width: 490px;
+    width: 490px;
     max-width: 490px;
     min-height: 605px;
     background-color: $cyan;
-    padding-top: 0;
   }
 
   .form picture {
     display: none;
   }
 
-  .form form {
-    width: 100%;
-    min-width: 100%;
+  .feedback-form {
     justify-content: space-between;
+    margin-bottom: 37px;
     padding-left: 40px;
     padding-top: 33px;
-    margin-bottom: 37px;
+    min-width: 100%;
+    width: 100%;
   }
 
-  .form h2 {
-    @include roboto-condensed(400);
+  .feedback-form__header {
     font-size: 28px;
     line-height: 39px;
-    margin-top: 0;
-    margin-bottom: 10px;
   }
 
-  .form p {
-    width: 85%;
+  .feedback-form__text {
     margin-bottom: 29px;
+    width: 85%;
   }
 
-  .form form input:not([id="data"]) {
+  .feedback-form input:not([id="data"]) {
+    margin-bottom: 30px;
     padding-left: 24px;
     width: 411px;
     height: 52px;
-    margin-bottom: 30px;
 
     &:hover {
-      border: 1px $white solid;
-      padding-left: 23px;
       margin-bottom: 30px;
-    }
-
-    &::placeholder {
-      color: $white;
+      padding-left: 23px;
     }
   }
 
-  .form form textarea {
-    width: 411px;
-    height: 104px;
+  .feedback-form textarea {
     margin-bottom: 32px;
     padding-left: 23px;
     padding-top: 15px;
+    width: 411px;
+    height: 104px;
 
     &:hover {
       border: 1px $white solid;
@@ -363,18 +324,18 @@
     }
   }
 
-  .form form label[for="data"] {
-    width: 380px;
+  .feedback-form label[for="data"] {
     padding-left: 47px;
+    width: 380px;
   }
 
-  .form .submit-form {
+  .button--feedback-form-submit {
     width: 411px;
     height: 47px;
     margin-bottom: 26px;
   }
 
-  .form .close-form {
+  .button--feedback-form-close {
     position: absolute;
     top: 20px;
     right: 20px;
@@ -390,8 +351,8 @@
       position: absolute;
       content: "";
       top: -3px;
-      height: 22px;
       width: 1px;
+      height: 22px;
       background-color: $white;
       transform: rotate(45deg);
     }
@@ -400,14 +361,10 @@
       position: absolute;
       content: "";
       top: -3px;
-      height: 23px;
       width: 1px;
+      height: 23px;
       background-color: $white;
       transform: rotate(-45deg);
-    }
-
-    &:hover {
-      opacity: 0.5;
     }
   }
 }
