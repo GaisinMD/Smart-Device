@@ -1,14 +1,12 @@
-
-
 .goods {
   @include margin-auto;
-  width: 60.9375%;
-  max-width: 1500px;
-  min-width: 970px;
   padding-top: 59px;
+  min-width: 970px;
+  width: 60.94%;
+  max-width: 1500px;
 }
 
-.goods h2 {
+.goods__header {
   @include roboto-condensed(400);
   font-size: 36px;
   line-height: 51px;
@@ -16,7 +14,7 @@
   color: $white;
 }
 
-.goods ul {
+.goods-list {
   @include zero-list;
   display: flex;
   flex-direction: row;
@@ -24,63 +22,64 @@
   justify-content: space-between;
 }
 
-.goods li {
+.element-goods {
   position: relative;
-  width: 31.62393162393162%;
   min-width: 200px;
+  width: 31.62%;
   min-height: 620px;
   cursor: pointer;
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    opacity: 0.3;
+  }
 }
 
-.goods li:hover {
-  opacity: 0.5;
-}
-
-.goods li::before {
-  opacity: 0.3;
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: cover;
-}
-
-.production::before {
+.element-goods--production::before {
   background-image: url("/img/goods_background1_desktop.png");
 }
 
-.mounting::before {
+.element-goods--mounting::before {
   background-image: url("/img/goods_background2_desktop.png");
 }
 
-.parts::before {
+.element-goods--parts::before {
   background-image: url("/img/goods_background3_desktop.png");
 }
 
 .goods a {
   @include roboto-condensed(400);
-  position: relative;
-  display: block;
-  height: 100%;
   font-size: 20px;
   line-height: 30px;
   color: $white;
+  position: relative;
+  display: block;
   padding-top: 50px;
+  height: 100%;
 }
 
-.goods p {
-  width: 170px;
-  margin-top: 0;
+.element-goods__text {
   margin-left: 44px;
-  opacity: 1;
+  margin-top: 0;
+  width: 170px;
 }
 
-.goods div {
+.element-goods__arrow {
   position: absolute;
+  color: transparent;
+  font-size: 0;
   right: 0;
   bottom: 0;
   width: 63px;
@@ -89,41 +88,38 @@
   background-image: url("/img/arrow.png");
   background-repeat: no-repeat;
   background-position: center center;
-  color: transparent;
-  font-size: 0;
 }
 
 //
 @media (max-width: $tablet-max-width) {
   .goods {
-    width: 93.75%;
-    min-width: 720px;
     padding-top: 23px;
+    min-width: 720px;
+    width: 93.75%;
   }
 
-  .goods h2 {
+  .goods__header {
     font-size: 32px;
     line-height: 45px;
-    margin-bottom: 50px;
     width: 615px;
   }
 
-  .goods li {
-    width: 100%;
-    min-width: 100%;
-    min-height: 256px;
+  .element-goods {
     margin-bottom: 46px;
+    min-width: 100%;
+    width: 100%;
+    min-height: 256px;
   }
 
-  .production::before {
+  .element-goods--production::before {
     background-image: url("/img/goods_background1_table.png");
   }
 
-  .mounting::before {
+  .element-goods--mounting::before {
     background-image: url("/img/goods_background2_table.png");
   }
 
-  .parts::before {
+  .element-goods--parts::before {
     background-image: url("/img/goods_background3_table.png");
   }
 
@@ -134,18 +130,14 @@
 
 //
 @media (max-width: $mobile-max-width) {
-  .wrapper-goods {
-    padding-bottom: 20px;
-  }
-
   .goods {
-    width: 90.625%;
-    min-width: 290px;
     margin-bottom: 13px;
     padding-top: 27px;
+    min-width: 290px;
+    width: 90.63%;
   }
 
-  .goods h2 {
+  .goods__header {
     font-size: 28px;
     line-height: 39px;
     margin-left: 10px;
@@ -153,19 +145,19 @@
     width: 95%;
   }
 
-  .goods li {
+  .element-goods {
     margin-bottom: 30px;
   }
 
-  .production::before {
+  .element-goods--production::before {
     background-image: url("/img/goods_background1_mobile.png");
   }
 
-  .mounting::before {
+  .element-goods--mounting::before {
     background-image: url("/img/goods_background2_mobile.png");
   }
 
-  .parts::before {
+  .element-goods--parts::before {
     background-image: url("/img/goods_background3_mobile.png");
   }
 
@@ -173,7 +165,7 @@
     padding-top: 19px;
   }
 
-  .goods p {
+  .element-goods__text {
     margin-left: 35px;
   }
 }
