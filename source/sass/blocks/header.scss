@@ -1,7 +1,6 @@
 .header {
   @include margin-auto;
   display: flex;
-  flex-direction: row;
   min-width: 1004px;
   width: 73.49%;
   max-width: 1500px;
@@ -21,7 +20,6 @@
 
 .links {
   display: flex;
-  flex-direction: row;
   min-width: 650px;
   width: 46.8%;
 }

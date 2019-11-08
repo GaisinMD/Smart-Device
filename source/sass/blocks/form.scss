@@ -1,7 +1,6 @@
 .form {
   @include margin-auto;
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
   padding-top: 91px;
@@ -20,7 +19,6 @@
 
 .feedback-form {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
   color: $white;
