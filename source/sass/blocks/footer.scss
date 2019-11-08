@@ -28,7 +28,7 @@
   margin-bottom: 25px;
 }
 
-.footer--wrapper {
+.footer__wrapper {
   @include margin-auto;
   display: flex;
   flex-direction: row;
@@ -97,7 +97,7 @@
   }
 }
 
-.footer--toggle {
+.footer__toggle {
   display: none;
 }
 
@@ -184,7 +184,7 @@
     bottom: 59px;
   }
 
-  .footer--wrapper {
+  .footer__wrapper {
     flex-wrap: wrap;
     min-width: 718px;
   }
@@ -283,7 +283,7 @@
     display: none;
   }
 
-  .footer--wrapper {
+  .footer__wrapper {
     min-width: 320px;
   }
 
@@ -361,7 +361,7 @@
     width: 90%;
   }
 
-  .footer--toggle {
+  .footer__toggle {
     display: block;
     position: relative;
     width: 16px;
