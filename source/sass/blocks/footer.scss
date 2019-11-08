@@ -303,10 +303,11 @@
     width: 216px;
   }
 
-  .copyright__item--year {
+  .social__logo-footer + .copyright__item--year {
     margin-left: 0;
     margin-bottom: 32px;
   }
+
 
   .list-icons {
     @include margin-auto;
