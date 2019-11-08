@@ -1,5 +1,6 @@
 .promo {
   @include margin-auto;
+  position: relative;
   display: flex;
   justify-content: space-between;
   min-width: 1007px;
@@ -7,6 +8,17 @@
   max-width: 1600px;
   padding-top: 170px;
   overflow: hidden;
+
+  &::after {
+    position: absolute;
+    content: "";
+    right: 0;
+    top: 170px;
+    width: 705px;
+    height: 515px;
+    background-image: url("/img/electronic_board.png");
+    background-color: transparent;
+  }
 }
 
 .promo-text-block {
@@ -16,6 +28,7 @@
   margin-left: 4.6%;
   margin-bottom: 90px;
   padding-top: 56px;
+  z-index: 1;
 }
 
 .promo-text-block__header {
@@ -81,10 +94,6 @@
   opacity: 0.25;
 }
 
-.promo-picture {
-  min-width: 705px;
-}
-
 //
 @media (max-width: $tablet-max-width) {
   .promo {
@@ -92,6 +101,14 @@
     padding-top: 36px;
     min-width: 680px;
     width: 88.54%;
+
+    &::after {
+      left: 421px;
+      top: 37px;
+      width: 465px;
+      height: 340px;
+      background-size: contain;
+    }
   }
 
   .promo-text-block {
@@ -135,12 +152,6 @@
   .promo-text-block__scroll {
     display: none;
   }
-
-  .promo-picture {
-    margin-left: -7px;
-    min-width: 465px;
-    height: 340px;
-  }
 }
 
 //
@@ -152,15 +163,21 @@
     min-width: 320px;
     width: 100%;
     max-width: 400px;
+
+    &::after {
+      left: 27px;
+      top: 33px;
+      width: 301px;
+      height: 220px;
+    }
   }
 
   .promo-text-block {
     margin-left: 5%;
-    margin-top: -30px;
+    margin-top: 190px;
     margin-right: auto;
     margin-bottom: 70px;
     padding-top: 0;
-    z-index: 1;
   }
 
   .promo-text-block__header {
@@ -184,17 +201,5 @@
     margin-left: 3px;
     margin-bottom: 0;
     width: 287px;
-  }
-
-  .promo-picture {
-    margin-left: 6.5%;
-    max-width: 301px;
-    height: 220px;
-  }
-
-  .promo-picture img {
-    margin-left: 5px;
-    min-width: 301px;
-    width: 301px;
   }
 }
