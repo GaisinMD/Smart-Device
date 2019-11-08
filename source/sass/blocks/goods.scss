@@ -2,14 +2,15 @@
   @include margin-auto;
   padding-top: 59px;
   min-width: 970px;
-  width: 60.94%;
-  max-width: 1500px;
+  width: 64.1%;
+  max-width: 1700px;
 }
 
 .goods__header {
   @include roboto-condensed(400);
   font-size: 36px;
   line-height: 51px;
+  margin-left: 30px;
   margin-bottom: 50px;
   color: $white;
 }
@@ -18,13 +19,15 @@
   @include zero-list;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  padding-left: 30px;
 }
 
 .element-goods {
   position: relative;
+  margin-right: 30px;
+  margin-bottom: 30px;
   min-width: 200px;
-  width: 31.62%;
+  width: 30.83%;
   min-height: 620px;
   cursor: pointer;
 
@@ -103,8 +106,14 @@
     width: 615px;
   }
 
+  .goods-list {
+    padding-left: 0;
+  }
+
   .element-goods {
+    margin-right: 0;
     margin-bottom: 46px;
+    padding-bottom: 0;
     min-width: 100%;
     width: 100%;
     min-height: 256px;

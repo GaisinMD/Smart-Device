@@ -5,13 +5,13 @@
     url("/img/left_big_reactangle.png") -5% 100% no-repeat,
     url("/img/right_small_reactangle.png") 95% center no-repeat;
   background-size: auto, auto, auto, auto;
-  padding-bottom: 98px;
+  padding-bottom: 109px;
 }
 
 @media (max-width: $tablet-max-width) {
   .advantages-about-wrapper {
     padding-top: 54px;
-    padding-bottom: 76px;
+    padding-bottom: 84px;
   }
 }
 

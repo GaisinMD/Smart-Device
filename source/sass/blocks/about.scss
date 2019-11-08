@@ -109,6 +109,10 @@
     padding-bottom: 25px;
     min-width: 290px;
     width: 90.63%;
+
+    &::before {
+      display: none;
+    }
   }
 
   .about__text {
