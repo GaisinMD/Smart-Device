@@ -129,8 +129,10 @@
   border: 1px $white solid;
   background-color: transparent;
   cursor: pointer;
+  padding-top: 5px;
+  padding-bottom: 5px;
   width: 270px;
-  height: 45px;
+  min-height: 45px;
 }
 
 //

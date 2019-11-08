@@ -55,8 +55,10 @@
   color: $cyan;
   text-transform: uppercase;
   margin-top: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   width: 180px;
-  height: 45px;
+  min-height: 45px;
   border: 1px solid $cyan;
   border-radius: 5px;
   background-color: $white;
