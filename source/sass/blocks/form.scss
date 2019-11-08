@@ -99,6 +99,7 @@
   width: 262px;
   order: 1;
   opacity: 0.8;
+  cursor: pointer;
 
   &:hover {
     opacity: 0.5;
@@ -261,6 +262,7 @@
   top: 0;
   left: 0;
   background: rgba(0, 0, 0, 0.5);
+  z-index: 100;
 
 
   .form {
@@ -286,6 +288,7 @@
     padding-top: 33px;
     min-width: 100%;
     width: 100%;
+    border-radius: 0;
   }
 
   .feedback-form__header {
@@ -327,6 +330,11 @@
   .feedback-form label[for="data"] {
     padding-left: 47px;
     width: 380px;
+  }
+
+  .feedback-form input[id="data"] {
+    left: 48px;
+    bottom: 58px;
   }
 
   .button--feedback-form-submit {
