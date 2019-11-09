@@ -1,6 +1,7 @@
 'use strict';
 
 var scrollTime = 800;
+var telephone = document.querySelector('input[name=phone]');
 
 function scrollingSmooth(elem) {
   var id = $(elem).attr('href');
@@ -20,4 +21,7 @@ $(document).ready(function () {
     evt.preventDefault();
     scrollingSmooth(evt.target);
   });
+
+  $(telephone).mask('+7(000) 000-0000');
+
 });

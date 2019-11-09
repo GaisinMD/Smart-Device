@@ -3,7 +3,6 @@
 var ESC_KEYCODE = 27;
 var form = document.querySelector('.form-wrapper');
 var nameFocus = form.querySelector('input[name=name]');
-// var telephone = form.querySelector('input[name=phone]');
 var formHeader = form.querySelector('h2');
 var formText = form.querySelector('p');
 var formSubmit = form.querySelector('.submit-form');
@@ -67,35 +66,3 @@ function activateForm() {
 
 mainButtonForForm.addEventListener('click', activateForm);
 setFormContent(formHeaderContent, formTextContent, formSubmitContent);
-
-// window.addEventListener('DOMContentLoaded', function () {
-//   function setCursorPosition(pos, elem) {
-//     elem.focus();
-//     if (elem.setSelectionRange) {
-//       elem.setSelectionRange(pos, pos);
-//     } else if (elem.createTextRange) {
-//       var range = elem.createTextRange();
-//       range.collapse(true);
-//       range.moveEnd('character', pos);
-//       range.moveStart('character', pos);
-//       range.select();
-//     }
-//   }
-
-//   function mask(event) {
-//     var matrix = this.defaultValue;
-//     var i = 0;
-//     var def = matrix.replace(/\D/g, '');
-//     this.value.replace(/\D/g, '');
-//     def.length >= val.length && (val = def);
-//     matrix = matrix.replace(/[_\d]/g, function (a) {
-//       return val.charAt(i++) || '_';
-//     });
-//     this.value = matrix;
-//     i = matrix.lastIndexOf(val.substr(-1));
-//     i < matrix.length && matrix != this.defaultValue ? i++ : i = matrix.indexOf("_");
-//     setCursorPosition(i, this)
-//   }
-
-//   telephone.addEventListener("input", mask, false)
-// });
