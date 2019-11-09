@@ -11,7 +11,7 @@ var buttonText = 'Получить бесплатную консультацию
 var mobileAboutText = 'Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог..';
 var aboutText = 'Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.';
 var copyrightYear = document.querySelector('.copyright__item--year').cloneNode(true);
-var logoFooter = document.querySelector('.logo-footer');
+var logoFooter = document.querySelector('.social__logo-footer');
 
 var buttonSections = document.querySelector('#sections');
 var buttonAddress = document.querySelector('#address');
