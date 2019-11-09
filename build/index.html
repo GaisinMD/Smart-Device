@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Сайт фирмы Smart Device - производителя электронных плат">
   <title>Smart Device</title>
   <link rel="preload" href="fonts/RobotoCondensed-Regular.woff2" as="font" type="font/woff2">
   <link rel="preload" href="fonts/RobotoCondensed-Bold.woff2" as="font" type="font/woff2">
@@ -165,9 +166,12 @@
         <form class="feedback-form">
           <h2 class="feedback-form__header">Остались вопросы? Задайте их нам!</h2>
           <p class="feedback-form__text">Мы проконсультируем Вас бесплатно</p>
-          <input name="name" type="text" placeholder="Имя" required="">
-          <input name="phone" type="tel" placeholder="Телефон" required="">
-          <textarea name="message" placeholder="Ваш вопрос" required=""></textarea>
+          <input name="name" id="name" type="text" placeholder="Имя" required="">
+          <label for="name" class="visually-hidden">Введите свое имя</label>
+          <input name="phone" id="phone" type="tel" placeholder="Телефон" required="">
+          <label for="phone" class="visually-hidden">Введите номер своего телефона</label>
+          <textarea name="message" id="message" placeholder="Ваш вопрос" required=""></textarea>
+          <label for="message" class="visually-hidden">Напишите ваш вопрос</label>
           <input name="data" id="data" type="checkbox" class="visually-hidden" checked="" required="">
           <label for="data">Я согласен на обработку персональных данных</label>
           <button class="button button--feedback-form-submit" type="submit">Задать вопрос</button>
