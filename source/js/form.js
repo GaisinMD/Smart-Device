@@ -2,10 +2,11 @@
 
 var ESC_KEYCODE = 27;
 var form = document.querySelector('.form-wrapper');
-var nameFocus = form.querySelector('input[name="name"]');
-var formHeader = form.querySelector('.feedback-form__header');
-var formText = form.querySelector('.feedback-form__text');
-var formSubmit = form.querySelector('.button--feedback-form-submit');
+var nameFocus = form.querySelector('input[name=name]');
+// var telephone = form.querySelector('input[name=phone]');
+var formHeader = form.querySelector('h2');
+var formText = form.querySelector('p');
+var formSubmit = form.querySelector('.submit-form');
 var formHeaderContent = 'Остались вопросы? Задайте их нам!';
 var formTextContent = 'Мы проконсультируем Вас бесплатно';
 var formSubmitContent = 'Задать вопрос';
@@ -16,46 +17,6 @@ var closeFormButton = form.querySelector('.button--feedback-form-close');
 var popupClass = 'popup';
 var visuallyHiddenClass = 'visually-hidden';
 var mainButtonForForm = document.querySelector('.button--header-call');
-
-// var phone = document.querySelector('input[name="phone"');
-
-window.addEventListener('DOMContentLoaded', function () {
-  [].forEach.call(document.querySelectorAll('input[name="phone"'), function (input) {
-    var keyCode;
-
-    function mask(event) {
-      event.keyCode && (keyCode = event.keyCode);
-      var pos = this.selectionStart;
-      if (pos < 3) event.preventDefault();
-      var matrix = "+7 (___) ___ ____",
-        i = 0,
-        def = matrix.replace(/\D/g, ""),
-        val = this.value.replace(/\D/g, ""),
-        new_value = matrix.replace(/[_\d]/g, function (a) {
-          return i < val.length ? val.charAt(i++) || def.charAt(i) : a
-        });
-      i = new_value.indexOf("_");
-      if (i != -1) {
-        i < 5 && (i = 3);
-        new_value = new_value.slice(0, i)
-      }
-      var reg = matrix.substr(0, this.value.length).replace(/_+/g,
-        function (a) {
-          return "\\d{1," + a.length + "}"
-        }).replace(/[+()]/g, "\\$&");
-      reg = new RegExp("^" + reg + "$");
-      if (!reg.test(this.value) || this.value.length < 5 || keyCode > 47 && keyCode < 58) this.value = new_value;
-      if (event.type == "blur" && this.value.length < 5) this.value = ""
-    }
-
-    input.addEventListener("input", mask, false);
-    input.addEventListener("focus", mask, false);
-    input.addEventListener("blur", mask, false);
-    input.addEventListener("keydown", mask, false)
-
-  });
-
-});
 
 function setFormContent(header, text, button) {
   if (formHeader) {
@@ -106,3 +67,35 @@ function activateForm() {
 
 mainButtonForForm.addEventListener('click', activateForm);
 setFormContent(formHeaderContent, formTextContent, formSubmitContent);
+
+// window.addEventListener('DOMContentLoaded', function () {
+//   function setCursorPosition(pos, elem) {
+//     elem.focus();
+//     if (elem.setSelectionRange) {
+//       elem.setSelectionRange(pos, pos);
+//     } else if (elem.createTextRange) {
+//       var range = elem.createTextRange();
+//       range.collapse(true);
+//       range.moveEnd('character', pos);
+//       range.moveStart('character', pos);
+//       range.select();
+//     }
+//   }
+
+//   function mask(event) {
+//     var matrix = this.defaultValue;
+//     var i = 0;
+//     var def = matrix.replace(/\D/g, '');
+//     this.value.replace(/\D/g, '');
+//     def.length >= val.length && (val = def);
+//     matrix = matrix.replace(/[_\d]/g, function (a) {
+//       return val.charAt(i++) || '_';
+//     });
+//     this.value = matrix;
+//     i = matrix.lastIndexOf(val.substr(-1));
+//     i < matrix.length && matrix != this.defaultValue ? i++ : i = matrix.indexOf("_");
+//     setCursorPosition(i, this)
+//   }
+
+//   telephone.addEventListener("input", mask, false)
+// });

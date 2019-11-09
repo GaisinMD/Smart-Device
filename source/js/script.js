@@ -4,26 +4,23 @@ var hideClass = 'visually-hidden';
 
 var mobileMaxWidth = 768;
 var tabletMaxWidth = 1024;
-
-var button = document.querySelector('.button--promo');
+var textAbout = document.querySelector('.about').querySelectorAll('p')[1];
+var button = document.querySelector('.promo').querySelector('button');
 var mobileButtonText = 'Бесплатная консультация';
 var buttonText = 'Получить бесплатную консультацию';
-
-var textAbout = document.querySelector('.about__text').querySelectorAll('p')[1];
 var mobileAboutText = 'Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог..';
 var aboutText = 'Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.';
-
-var logoFooter = document.querySelector('.social__logo-footer');
 var copyrightYear = document.querySelector('.copyright__item--year').cloneNode(true);
+var logoFooter = document.querySelector('.logo-footer');
 
 var buttonSections = document.querySelector('#sections');
 var buttonAddress = document.querySelector('#address');
+
 var buttonBackgroundOpen = 'url("/img/button_section_open.png")';
 var buttonBackgroundClose = 'url("/img/button_section_close.png")';
 
-var siteSections = document.querySelector('.list-sections');
-var address = document.querySelector('.address__text');
-
+var siteSections = document.querySelector('.site-sections').querySelector('ul');
+var address = document.querySelector('.address').querySelector('div');
 
 function toggleSection(section, buttonClose) {
   if (section) {
@@ -38,13 +35,10 @@ function toggleSection(section, buttonClose) {
 }
 
 function hideElement() {
-  if (document.body.clientWidth < mobileMaxWidth) {
+  if (document.body.clientWidth <= mobileMaxWidth) {
     siteSections.classList.add(hideClass);
   } else {
     siteSections.classList.remove(hideClass);
-    address.classList.remove(hideClass);
-    buttonSections.style.backgroundImage = buttonBackgroundClose;
-    buttonAddress.style.backgroundImage = buttonBackgroundOpen;
   }
 }
 
@@ -59,9 +53,9 @@ function changeElementText(element, width, text, replaceText) {
 }
 
 function replaceElement(nodeBefore, node, width) {
-  var copyrightYearNew = document.querySelector('.social').querySelector('.copyright__item--year');
+  var copyrightYearNew = document.querySelector('.social').querySelector('.copyright_year');
   if (node) {
-    if (document.body.clientWidth < width) {
+    if (document.body.clientWidth <= width) {
       nodeBefore.after(node);
     } else {
       if (copyrightYearNew) {
