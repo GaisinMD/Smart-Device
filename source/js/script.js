@@ -53,7 +53,7 @@ function changeElementText(element, width, text, replaceText) {
 }
 
 function replaceElement(nodeBefore, node, width) {
-  var copyrightYearNew = document.querySelector('.social').querySelector('.copyright_year');
+  var copyrightYearNew = document.querySelector('.social').querySelector('.copyright__item--year');
   if (node) {
     if (document.body.clientWidth <= width) {
       nodeBefore.after(node);
