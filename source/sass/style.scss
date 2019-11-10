@@ -11,13 +11,19 @@
 @import "components/button";
 //
 @import "blocks/top-wrapper";
-@import "blocks/header";
-@import "blocks/promo";
+@import "blocks/header/header";
+@import "blocks/header/links";
+//
+@import "blocks/promo/promo";
+//
 @import "blocks/advantages-about-wrapper";
-@import "blocks/advantages";
-@import "blocks/about";
+@import "blocks/advantages/advantages";
+@import "blocks/about/about";
+//
 @import "blocks/goods-wrapper";
-@import "blocks/goods";
+@import "blocks/goods/goods";
+//
 @import "blocks/form-wrapper";
-@import "blocks/form";
-@import "blocks/footer";
+@import "blocks/form/form";
+//
+@import "blocks/footer/footer";
