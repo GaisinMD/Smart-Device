@@ -6,7 +6,8 @@
   border-radius: 0;
 }
 
-.feedback-form input:not([name="data"]) {
+.feedback-form input[id="name"],
+.feedback-form input[id="phone"] {
   @include pt-mono;
   font-size: 16px;
   line-height: 22px;
@@ -85,7 +86,7 @@
   bottom: 30px;
 }
 
-.feedback-form input[name="data"]:checked+label[for="data"]::before {
+.feedback-form input[id="data"]:checked + label[for="data"]::before {
   background: url("/img/tick.png") center center no-repeat;
 }
 
@@ -131,7 +132,8 @@
 
 //
 @media (max-width: $mobile-max-width) {
-  .feedback-form input:not([id="data"]) {
+  .feedback-form input[id="name"],
+  .feedback-form input[id="phone"] {
     margin-bottom: 30px;
     width: 100%;
 

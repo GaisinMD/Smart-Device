@@ -22,6 +22,6 @@ $(document).ready(function () {
     scrollingSmooth(evt.target);
   });
 
-  $(telephone).mask('+7(000) 000-0000');
+  // $(telephone).mask('+7(000) 000-0000');
 
 });
