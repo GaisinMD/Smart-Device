@@ -14,10 +14,6 @@
   margin-top: 0;
   margin-bottom: 0;
 
-  &:hover {
-    opacity: 0.25;
-  }
-
   &--reserved {
     margin-right: 3%;
     min-width: 160px;
@@ -30,11 +26,19 @@
 
   &--nda {
     width: 23.98%;
+
+    &:hover {
+      opacity: 0.25;
+    }
   }
 
   &--developed {
     margin-left: auto;
     min-width: 192px;
+
+    &:hover {
+      opacity: 0.25;
+    }
   }
 }
 
@@ -69,7 +73,7 @@
     }
   }
 
-  .copyright__item + .copyright__item--year {
+  .copyright__item+.copyright__item--year {
     display: none;
   }
 }
