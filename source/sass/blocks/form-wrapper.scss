@@ -16,5 +16,6 @@
 @media (max-width: $mobile-max-width) {
   .form-wrapper {
     padding-bottom: 41px;
+    min-width: 290px;
   }
 }

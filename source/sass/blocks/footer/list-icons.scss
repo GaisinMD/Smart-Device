@@ -1,0 +1,39 @@
+.list-icons {
+  @include zero-list;
+  display: flex;
+}
+
+.list-icons__item {
+  margin-right: 16px;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+//
+@media (max-width: $tablet-max-width) {
+  .list-icons {
+    align-items: center;
+    margin-left: 7.94%;
+  }
+
+  .list-icons__item {
+    margin-left: 16px;
+    margin-right: 0;
+  }
+}
+
+//
+@media (max-width: $mobile-max-width) {
+  .list-icons {
+    @include margin-auto;
+    justify-content: space-around;
+    min-width: 113px;
+    width: 35.31%;
+  }
+
+  .list-icons__item:first-child {
+    margin-left: 0;
+  }
+}

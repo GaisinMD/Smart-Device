@@ -1,0 +1,18 @@
+.footer-top {
+  margin-bottom: 72px;
+}
+
+//
+@media (max-width: $tablet-max-width) {
+  .footer-top {
+    margin-bottom: 57px;
+  }
+}
+
+//
+@media (max-width: $mobile-max-width) {
+  .footer-top {
+    margin-bottom: 0;
+    width: 100%;
+  }
+}
