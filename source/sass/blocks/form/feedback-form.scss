@@ -1,0 +1,198 @@
+.feedback-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  color: $white;
+  margin-left: auto;
+  margin-right: 27px;
+  margin-bottom: 75px;
+  min-width: 545px;
+  width: 46.72%;
+  z-index: 1;
+}
+
+.feedback-form__header {
+  @include roboto-condensed(400);
+  font-size: 36px;
+  line-height: 51px;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.feedback-form__text {
+  @include pt-mono;
+  font-size: 16px;
+  line-height: 22px;
+  margin-top: 0;
+  margin-bottom: 49px;
+}
+
+.feedback-form input:not([name="data"]) {
+  @include pt-mono;
+  font-size: 16px;
+  line-height: 22px;
+  border: none;
+  color: $white;
+  background-color: $light-cyan;
+  margin-bottom: 40px;
+  padding-left: 16px;
+  width: 47.37%;
+  height: 52px;
+
+  &:hover {
+    margin-bottom: 38px;
+    padding-left: 15px;
+    border: 1px $white solid;
+  }
+
+  &::placeholder {
+    color: $white;
+  }
+}
+
+.feedback-form textarea {
+  @include pt-mono;
+  width: 100%;
+  border: none;
+  resize: none;
+  color: $white;
+  background-color: $light-cyan;
+  margin-bottom: 43px;
+  padding-left: 16px;
+  padding-top: 13px;
+  height: 154px;
+
+  &:hover {
+    border: 1px $white solid;
+    padding-left: 15px;
+    padding-top: 12px;
+  }
+
+  &::placeholder {
+    color: $white;
+  }
+}
+
+.feedback-form label[for="data"] {
+  @include pt-mono;
+  position: relative;
+  font-size: 14px;
+  line-height: 16px;
+  padding-left: 32px;
+  padding-top: 8px;
+  width: 262px;
+  order: 1;
+  opacity: 0.8;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 8px;
+    width: 16px;
+    height: 16px;
+    border: 1px solid $white;
+    background: none;
+  }
+}
+
+.feedback-form input[name="data"]:checked+label[for="data"]::before {
+  background: url("/img/tick.png") center center no-repeat;
+}
+
+//
+@media (max-width: $tablet-max-width) {
+  .feedback-form {
+    margin-bottom: 65px;
+    min-width: 100%;
+    width: 100%;
+  }
+
+  .feedback-form__header {
+    font-size: 32px;
+    line-height: 45px;
+    margin-bottom: 15px;
+  }
+
+  .feedback-form__text {
+    margin-left: 4px;
+    margin-bottom: 52px;
+    width: 100%;
+  }
+
+  .feedback-form input:not([id="data"]) {
+    margin-bottom: 45px;
+    padding-left: 20px;
+
+    &:hover {
+      margin-bottom: 43px;
+      padding-left: 19px;
+    }
+  }
+
+  .feedback-form textarea {
+    margin-bottom: 49px;
+    padding-left: 20px;
+    padding-top: 13px;
+
+    &:hover {
+      padding-left: 19px;
+      padding-top: 12px;
+    }
+  }
+
+  .feedback-form label[for="data"] {
+    margin-right: 7px;
+    padding-top: 9px;
+    padding-left: 33px;
+  }
+
+  .button--feedback-form-submit {
+    margin-left: 2px;
+    width: 280px;
+    height: 47px;
+  }
+}
+
+//
+@media (max-width: $mobile-max-width) {
+  .feedback-form {
+    margin-bottom: 0;
+  }
+
+  .feedback-form__header {
+    font-size: 28px;
+    line-height: 39px;
+    margin-bottom: 13px;
+  }
+
+  .feedback-form__text {
+    margin-left: 0;
+    margin-bottom: 24px;
+  }
+
+  .feedback-form input:not([id="data"]) {
+    margin-bottom: 30px;
+    width: 100%;
+
+    &:hover {
+      margin-bottom: 30px;
+    }
+  }
+
+  .feedback-form textarea {
+    margin-bottom: 32px;
+    padding-left: 15px;
+    padding-top: 15px;
+    height: 104px;
+
+    &:hover {
+      padding-left: 14px;
+      padding-top: 14px;
+    }
+  }
