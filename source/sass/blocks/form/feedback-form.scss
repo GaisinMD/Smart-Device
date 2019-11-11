@@ -1,4 +1,5 @@
 .feedback-form {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -79,6 +80,11 @@
   }
 }
 
+.feedback-form input[id="data"] {
+  right: 253px;
+  bottom: 30px;
+}
+
 .feedback-form input[name="data"]:checked+label[for="data"]::before {
   background: url("/img/tick.png") center center no-repeat;
 }
@@ -112,6 +118,10 @@
     padding-left: 33px;
   }
 
+  .feedback-form input[id="data"] {
+    right: 260px;
+  }
+
   .button--feedback-form-submit {
     margin-left: 2px;
     width: 280px;
@@ -140,5 +150,9 @@
       padding-left: 14px;
       padding-top: 14px;
     }
+  }
+
+  .feedback-form input[id="data"] {
+    left: 10px;
   }
 }
