@@ -6,117 +6,12 @@
   max-width: 1500px;
 }
 
-.advantages-list {
-  @include zero-list;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.advantages-list__element {
-  margin-bottom: 30px;
-  padding-bottom: 20px;
-}
-
-.advantages-element {
-  position: relative;
-  min-width: 485px;
-  width: 48.72%;
-  min-height: 299px;
-  border: 1px solid $darker-white;
-  background-color: $white;
-}
-
-.advantages-element:hover {
-  background-color: $cyan;
-
-  svg {
-    fill: $white;
-  }
-
-  .advantages-element__header {
-    color: $white;
-  }
-
-  .advantages-element__text {
-    color: $white;
-  }
-}
-
-.advantages-element::before {
-  position: absolute;
-  content: "";
-  left: 0;
-  top: 0;
-  width: 3px;
-  height: 100%;
-  background-color: $cyan;
-}
-
-.advantages-element svg {
-  margin-bottom: 16px;
-  fill: $cyan;
-}
-
-.advantages-element a {
-  display: block;
-  text-decoration: none;
-  padding-left: 43px;
-  padding-top: 40px;
-  width: 100%;
-  height: 100%;
-}
-
-.advantages-element__header {
-  @include roboto-condensed(400);
-  font-size: 24px;
-  line-height: 34px;
-  color: $cyan;
-  margin-top: 0;
-  margin-bottom: 15px;
-  width: 93%;
-}
-
-.advantages-element__text {
-  @include pt-mono;
-  font-size: 16px;
-  line-height: 22px;
-  color: $dark-grey;
-  width: 93%;
-}
-
 //
 @media (max-width: $tablet-max-width) {
   .advantages {
     margin-bottom: 20px;
     width: 93.75%;
     min-width: 720px;
-  }
-
-  .advantages-element {
-    padding-bottom: 19px;
-    min-width: 345px;
-    width: 47.92%;
-    min-height: 232px;
-  }
-
-  .advantages-element a {
-    padding-left: 28px;
-    padding-top: 25px;
-  }
-
-  .advantages-element svg {
-    margin-bottom: 2px;
-  }
-
-
-  .advantages-element__header {
-    margin-bottom: 10px;
-    width: 100%;
-  }
-
-  .advantages-element__text {
-    margin-top: 0;
   }
 }
 
@@ -126,32 +21,5 @@
     margin-bottom: 28px;
     width: 90.63%;
     min-width: 290px;
-  }
-
-  .advantages-element {
-    margin-bottom: 20px;
-    padding-bottom: 23px;
-    width: 100%;
-    min-width: 290px;
-    min-height: 200px;
-  }
-
-  .advantages-element a {
-    padding-left: 26px;
-    padding-bottom: 0;
-  }
-
-  .advantages-element svg {
-    margin-bottom: 8px;
-  }
-
-  .advantages-element__header {
-    font-size: 20px;
-    line-height: 28px;
-    width: 90%;
-  }
-
-  .advantages-element:nth-child(even) .advantages-element__text {
-    width: 97%;
   }
 }
