@@ -94,28 +94,26 @@
     }
   }
 
-  .form picture {
-    display: none;
-  }
-
-  .feedback-form {
-    justify-content: space-between;
+  .feedback-wrapper {
     margin-bottom: 37px;
     padding-left: 40px;
     padding-top: 33px;
     min-width: 100%;
     width: 100%;
-    border-radius: 0;
   }
 
-  .feedback-form__header {
+  .feedback-wrapper h2 {
     font-size: 28px;
     line-height: 39px;
   }
 
-  .feedback-form__text {
+  .feedback-wrapper p {
     margin-bottom: 29px;
     width: 85%;
+  }
+
+  .feedback-form {
+    justify-content: space-between;
   }
 
   .feedback-form input:not([id="data"]) {
