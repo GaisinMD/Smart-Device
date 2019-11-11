@@ -165,7 +165,7 @@
             <label for="name" class="visually-hidden">Введите свое имя</label>
             <input name="name" id="name" type="text" placeholder="Имя" required="">
             <label for="phone" class="visually-hidden">Введите номер своего телефона</label>
-            <input name="phone" id="phone" type="tel" placeholder="Телефон" pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}" required="">
+            <input name="phone" id="phone" type="tel" placeholder="Телефон" pattern="^[ 0-9/(/)/+]+$" required="">
             <label for="message" class="visually-hidden">Напишите ваш вопрос</label>
             <textarea name="message" id="message" placeholder="Ваш вопрос" required=""></textarea>
             <input name="data" id="data" type="checkbox" class="visually-hidden" checked="" required="">
