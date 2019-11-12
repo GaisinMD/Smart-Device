@@ -1,41 +1,17 @@
 'use strict';
 
 var ESC_KEYCODE = 27;
-var form = document.querySelector('.form-wrapper');
-var nameFocus = form.querySelector('input[name=name]');
-var formHeader = form.querySelector('h2');
-var formText = form.querySelector('p');
-var formSubmit = form.querySelector('.submit-form');
-var formHeaderContent = 'Остались вопросы? Задайте их нам!';
-var formTextContent = 'Мы проконсультируем Вас бесплатно';
-var formSubmitContent = 'Задать вопрос';
-var formHeaderContentMobile = 'Закажите звонок';
-var formTextContentMobile = 'Оставьте контакты, мы проконсультируем вас бесплатно в удобное время';
-var formSubmitContentMobile = 'Отправить';
-var closeFormButton = form.querySelector('.feedback-form__close');
-var popupClass = 'popup';
-var visuallyHiddenClass = 'visually-hidden';
+
+var popupForm = document.querySelector('.popup');
+var nameFocus = popupForm.querySelector('input[name=name]');
+var closeFormButton = popupForm.querySelector('.feedback-form__close');
 var mainButtonForForm = document.querySelector('.header__button');
 
-function setFormContent(header, text, button) {
-  if (formHeader) {
-    formHeader.textContent = header;
-  }
-  if (formText) {
-    formText.textContent = text;
-  }
-  if (formSubmit) {
-    formSubmit.textContent = button;
-  }
-}
-
 function deactivateForm() {
-  form.classList.remove(popupClass);
+  popupForm.classList.add(window.constants.HIDE_CLASS);
   nameFocus.blur();
   closeFormButton.removeEventListener('click', deactivateForm);
   document.removeEventListener('keydown', onEscPress);
-  closeFormButton.classList.add(visuallyHiddenClass);
-  setFormContent(formHeaderContent, formTextContent, formSubmitContent);
 }
 
 function onEscPress(evt) {
@@ -45,19 +21,19 @@ function onEscPress(evt) {
 }
 
 function hideForm() {
-  closeFormButton.addEventListener('click', deactivateForm);
+  popupForm.addEventListener('click', function (evt) {
+    if (evt.target === closeFormButton || evt.target === popupForm) {
+      deactivateForm();
+    }
+  });
   document.addEventListener('keydown', onEscPress);
 }
 
 function activateForm() {
-  if (form) {
+  if (popupForm) {
     nameFocus.focus();
-    if (!form.classList.contains(popupClass)) {
-      form.classList.add(popupClass);
-      setFormContent(formHeaderContentMobile, formTextContentMobile, formSubmitContentMobile);
-    }
-    if (closeFormButton || closeFormButton.classList.contains(visuallyHiddenClass)) {
-      closeFormButton.classList.remove(visuallyHiddenClass);
+    if (popupForm.classList.contains(window.constants.HIDE_CLASS)) {
+      popupForm.classList.remove(window.constants.HIDE_CLASS);
     }
     window.scrollTo(pageXOffset, 0);
     hideForm();
@@ -65,4 +41,3 @@ function activateForm() {
 }
 
 mainButtonForForm.addEventListener('click', activateForm);
-setFormContent(formHeaderContent, formTextContent, formSubmitContent);
