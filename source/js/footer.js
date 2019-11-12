@@ -6,8 +6,8 @@ var buttonSections = document.querySelector('#sections');
 var address = document.querySelector('.address__text');
 var buttonAddress = document.querySelector('#address');
 
-var buttonBackgroundOpen = 'url("/img/button_section_open.png")';
-var buttonBackgroundClose = 'url("/img/button_section_close.png")';
+var buttonBackgroundOpen = 'url("../img/button_section_open.png")';
+var buttonBackgroundClose = 'url("../img/button_section_close.png")';
 
 function hideFooterSection(site, button) {
   if (site) {

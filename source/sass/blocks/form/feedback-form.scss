@@ -87,7 +87,7 @@
 }
 
 .feedback-form input[id="data"]:checked + label[for="data"]::before {
-  background: url("/img/tick.png") center center no-repeat;
+  background: url("../img/tick.png") center center no-repeat;
 }
 
 .feedback-form__submit {

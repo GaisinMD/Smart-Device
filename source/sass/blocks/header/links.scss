@@ -37,7 +37,7 @@
   top: 20px;
   width: 19px;
   height: 14px;
-  background-image: url("/img/envelope.png");
+  background-image: url("../img/envelope.png");
 }
 
 .links__item--phone-number {
@@ -50,7 +50,7 @@
   top: 16px;
   width: 18px;
   height: 18px;
-  background-image: url("/img/phone-call.png");
+  background-image: url("../img/phone-call.png");
 }
 
 @media (max-width: $tablet-max-width) {

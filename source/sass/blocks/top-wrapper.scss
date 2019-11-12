@@ -1,7 +1,7 @@
 .top-wrapper {
   padding-top: 33px;
-  background: url("/img/header_background.png") center top no-repeat,
-    url("/img/group_of_two_reactangles.png") center top no-repeat;
+  background: url("../img/header_background.png") center top no-repeat,
+    url("../img/group_of_two_reactangles.png") center top no-repeat;
   background-size: cover, auto;
   background-color: $dark;
 }
@@ -9,8 +9,8 @@
 @media (max-width: $tablet-max-width) {
   .top-wrapper {
     padding-top: 20px;
-    background: url("/img/header_background.png") center top no-repeat,
-      url("/img/group_of_two_reactangles.png") center -130px no-repeat;
+    background: url("../img/header_background.png") center top no-repeat,
+      url("../img/group_of_two_reactangles.png") center -130px no-repeat;
     background-size: auto, cover;
     background-color: $dark;
   }
@@ -19,8 +19,8 @@
 @media (max-width: $mobile-max-width) {
   .top-wrapper {
     padding-top: 17px;
-    background: url("/img/header_background.png") center top no-repeat,
-      url("/img/group_of_two_reactangles.png") center -130px no-repeat;
+    background: url("../img/header_background.png") center top no-repeat,
+      url("../img/group_of_two_reactangles.png") center -130px no-repeat;
     background-size: auto, cover;
     background-color: $dark;
     min-width: $mobile-min-width;

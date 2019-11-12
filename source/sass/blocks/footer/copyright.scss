@@ -73,7 +73,7 @@
     }
   }
 
-  .copyright__item+.copyright__item--year {
+  .copyright__item + .copyright__item--year {
     display: none;
   }
 }

@@ -16,7 +16,7 @@
     left: 0;
     width: 511px;
     height: 288px;
-    background-image: url("/img/paper_airplane.png");
+    background-image: url("../img/paper_airplane.png");
     background-position: center top;
     background-repeat: no-repeat;
   }
@@ -46,6 +46,8 @@
   }
 }
 
+//
+//
 .popup {
   position: absolute;
   width: 100%;

@@ -16,7 +16,7 @@
     top: 170px;
     width: 705px;
     height: 515px;
-    background-image: url("/img/electronic_board.png");
+    background-image: url("../img/electronic_board.png");
     background-color: transparent;
   }
 }
@@ -220,6 +220,6 @@
   }
 
   .promo__button-mobile {
-    display: inline-block;
+    display: inline;
   }
 }
