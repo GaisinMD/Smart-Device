@@ -3,11 +3,22 @@
   width: 46.53%;
 }
 
+.site-sections__list-wrapper {
+  @include pt-mono;
+  font-size: 15px;
+  line-height: 25px;
+  display: flex;
+}
+
 //
 @media (max-width: $tablet-max-width) {
   .site-sections {
     min-width: 243px;
     width: 33.84%;
+  }
+
+  .site-sections__list-wrapper {
+    flex-direction: column;
   }
 }
 
@@ -36,5 +47,9 @@
       background-color: $light-dark-grey;
       opacity: 0.2;
     }
+  }
+
+  .site-sections__list-wrapper {
+    padding-bottom: 25px;
   }
 }

@@ -19,7 +19,7 @@ var buttonAddress = document.querySelector('#address');
 var buttonBackgroundOpen = 'url("/img/button_section_open.png")';
 var buttonBackgroundClose = 'url("/img/button_section_close.png")';
 
-var siteSections = document.querySelector('.site-sections').querySelector('ul');
+var siteSections = document.querySelector('.site-sections__list-wrapper');
 var address = document.querySelector('.address').querySelector('div');
 
 function toggleSection(section, buttonClose) {
@@ -35,7 +35,7 @@ function toggleSection(section, buttonClose) {
 }
 
 function hideElement() {
-  if (document.body.clientWidth <= mobileMaxWidth) {
+  if (document.body.clientWidth < mobileMaxWidth) {
     siteSections.classList.add(hideClass);
   } else {
     siteSections.classList.remove(hideClass);
@@ -44,7 +44,7 @@ function hideElement() {
 
 function changeElementText(element, width, text, replaceText) {
   if (element) {
-    if (document.body.clientWidth >= width) {
+    if (document.body.clientWidth > width) {
       element.textContent = text;
     } else {
       element.textContent = replaceText;
