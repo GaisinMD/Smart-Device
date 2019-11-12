@@ -12,10 +12,10 @@ var formSubmitContent = 'Задать вопрос';
 var formHeaderContentMobile = 'Закажите звонок';
 var formTextContentMobile = 'Оставьте контакты, мы проконсультируем вас бесплатно в удобное время';
 var formSubmitContentMobile = 'Отправить';
-var closeFormButton = form.querySelector('.button--feedback-form-close');
+var closeFormButton = form.querySelector('.feedback-form__close');
 var popupClass = 'popup';
 var visuallyHiddenClass = 'visually-hidden';
-var mainButtonForForm = document.querySelector('.button--header-call');
+var mainButtonForForm = document.querySelector('.header__button');
 
 function setFormContent(header, text, button) {
   if (formHeader) {

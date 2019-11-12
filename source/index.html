@@ -37,7 +37,7 @@
         <a class="links__item links__item--phone-number" href="tel:+7(495)0005252" aria-label="Контактный телефон">
           +7 (495) 000 52 52
         </a>
-        <a class="button button--header-call" href="#">Заказать звонок</a>
+        <a class="button header__button" href="#">Заказать звонок</a>
       </div>
     </header>
 
@@ -45,7 +45,10 @@
       <div class="promo__wrapper">
         <h1 class="promo__header">Печатные платы</h1>
         <p class="promo__text">производство и монтаж, поставка комплектующих, блоков и модулей</p>
-        <a class="button button--promo" href="#form">Получить бесплатную консультацию</a>
+        <a class="promo__button" href="#form">
+          <span class="promo__button-desktop">Получить бесплатную консультацию</span>
+          <span class="promo__button-mobile">Бесплатная консультация</span>
+        </a>
         <a class="promo__scroll" href="#advantages">Скролл вниз</a>
       </div>
     </section>
@@ -118,7 +121,7 @@
             (РЖД),
             РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители
             светотехники России.</p>
-          <a class="button button--about" href="#">Подробнее</a>
+          <a class="button about__button button--about" href="#">Подробнее</a>
         </article>
       </section>
     </div>
@@ -173,8 +176,8 @@
             <textarea name="message" id="message" placeholder="Ваш вопрос" required></textarea>
             <input name="data" id="data" type="checkbox" class="visually-hidden" checked required>
             <label for="data">Я согласен на обработку персональных данных</label>
-            <button class="button button--feedback-form-submit" type="submit">Задать вопрос</button>
-            <button class="button button--feedback-form-close visually-hidden" type="button">Закрыть форму</button>
+            <button class="button feedback-form__submit" type="submit">Задать вопрос</button>
+            <button class="feedback-form__close visually-hidden" type="button">Закрыть форму</button>
           </form>
         </div>
       </section>

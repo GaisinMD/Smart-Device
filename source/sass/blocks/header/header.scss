@@ -4,6 +4,7 @@
   min-width: 1004px;
   width: 73.49%;
   max-width: 1500px;
+  color: $white;
 }
 
 .header__logo {
@@ -18,73 +19,11 @@
   margin-left: auto;
 }
 
-.links {
-  display: flex;
-  min-width: 650px;
-  width: 46.8%;
-}
-
-.links__item {
-  @include pt-mono;
-  position: relative;
-  display: flex;
-  align-items: center;
-  font-size: 16px;
-  line-height: 18px;
-  text-decoration: none;
-  color: $white;
-}
-
-.links__item:hover {
-  opacity: 0.5;
-}
-
-.links__item::before {
-  position: absolute;
-  content: "";
-  left: 0;
-  background-size: contain;
-  background-position: center center;
-  background-repeat: no-repeat;
-}
-
-.links__item--mailto {
-  padding-left: 39px;
-  min-width: 135px;
-}
-
-.links__item--mailto::before {
-  top: 20px;
-  width: 19px;
-  height: 14px;
-  background-image: url("/img/envelope.png");
-}
-
-.links__item--phone-number {
-  margin-left: 13.35%;
-  padding-left: 34px;
-  min-width: 215px;
-}
-
-.links__item--phone-number::before {
-  top: 16px;
-  width: 18px;
-  height: 18px;
-  background-image: url("/img/phone-call.png");
-}
-
-.button--header-call {
+.header__button {
   margin-top: 4px;
   margin-left: 40px;
   margin-bottom: 6px;
   width: 180px;
-  min-height: 45px;
-  font-size: 14px;
-  line-height: 16px;
-  letter-spacing: 0.05em;
-  color: $white;
-  border: 1px solid $white;
-  background-color: transparent;
 }
 
 //
@@ -95,40 +34,7 @@
     width: 93.75%;
   }
 
-  .links {
-    min-width: 11.53%;
-    width: 11.53%;
-  }
-
-  .links__item {
-    font-size: 0;
-    color: transparent;
-    align-items: flex-start;
-    padding-left: 0;
-  }
-
-  .links__item--mailto {
-    min-width: 25px;
-  }
-
-  .links__item--mailto::before {
-    top: 15px;
-    width: 25px;
-    height: 19px;
-  }
-
-  .links__item--phone-number {
-    margin-left: auto;
-    min-width: 24px;
-  }
-
-  .links__item--phone-number::before {
-    top: 12px;
-    width: 24px;
-    height: 24px;
-  }
-
-  .button--header-call {
+  .header__button {
     display: none;
   }
 }
@@ -143,23 +49,5 @@
   .header__logo img {
     width: 38px;
     height: 38px;
-  }
-
-  .links {
-    padding-left: 0;
-    min-width: 25.35%;
-    width: 25.35%;
-  }
-
-  .links__item--mailto::before {
-    top: 8px;
-  }
-
-  .links__item--phone-number {
-    margin-left: 30%;
-  }
-
-  .links__item--phone-number::before {
-    top: 4px;
   }
 }

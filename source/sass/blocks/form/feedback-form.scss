@@ -90,6 +90,11 @@
   background: url("/img/tick.png") center center no-repeat;
 }
 
+.feedback-form__submit {
+  width: 270px;
+}
+
+
 //
 @media (max-width: $tablet-max-width) {
   .feedback-form input:not([id="data"]) {
@@ -123,7 +128,7 @@
     right: 260px;
   }
 
-  .button--feedback-form-submit {
+  .feedback-form__submit {
     margin-left: 2px;
     width: 280px;
     height: 47px;
@@ -158,7 +163,10 @@
     left: 10px;
   }
 
-  .button--feedback-form-submit {
-    width: 290px;
+  .feedback-form__submit {
+    @include margin-auto;
+    width: 100%;
+    max-width: 350px;
+    margin-bottom: 23px;
   }
 }

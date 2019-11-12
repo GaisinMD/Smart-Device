@@ -1,15 +1,27 @@
 .button {
   @include roboto-condensed(700);
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  display: block;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
+  color: currentColor;
+  border: 1px solid currentColor;
   border-radius: 5px;
   padding-left: 10px;
   padding-right: 10px;
   padding-top: 14px;
   padding-bottom: 14px;
+  min-height: 45px;
+  background-color: transparent;
 }
 
 .button:hover {
   opacity: 0.5;
+}
+
+.button--about {
+  color: $cyan;
 }

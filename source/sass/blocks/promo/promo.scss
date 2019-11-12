@@ -63,18 +63,30 @@
   }
 }
 
-.button--promo {
+.promo__button {
+  @include roboto-condensed(700);
   font-size: 16px;
   line-height: 19px;
   letter-spacing: 0.05em;
-  color: $white;
+  color: currentColor;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 5px;
   margin-left: 96px;
   margin-bottom: 95px;
+  padding-left: 10px;
+  padding-right: 10px;
   padding-top: 17px;
-  padding-bottom: 10px;
+  padding-bottom: 17px;
   width: 407px;
   min-height: 55px;
   background-color: $cyan;
+}
+
+.promo__button-mobile {
+  display: none;
 }
 
 .promo__scroll {
@@ -143,7 +155,7 @@
     }
   }
 
-  .button--promo {
+  .promo__button {
     margin-left: 51px;
     margin-bottom: 93px;
     width: 379px;
@@ -197,9 +209,17 @@
     width: 293px;
   }
 
-  .button--promo {
+  .promo__button {
     margin-left: 3px;
     margin-bottom: 0;
     width: 287px;
+  }
+
+  .promo__button-desktop {
+    display: none;
+  }
+
+  .promo__button-mobile {
+    display: inline-block;
   }
 }

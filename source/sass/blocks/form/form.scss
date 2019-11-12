@@ -22,21 +22,6 @@
   }
 }
 
-.button--feedback-form-submit {
-  font-size: 14px;
-  line-height: 16px;
-  letter-spacing: 0.05em;
-  color: $white;
-  text-transform: uppercase;
-  border: 1px $white solid;
-  background-color: transparent;
-  cursor: pointer;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  width: 270px;
-  min-height: 45px;
-}
-
 //
 @media (max-width: $tablet-max-width) {
   .form {
@@ -58,14 +43,6 @@
     min-width: 290px;
     width: 90.64%;
     max-width: 550px;
-  }
-
-  .button--feedback-form-submit {
-    @include margin-auto;
-    width: 100%;
-    max-width: 350px;
-    height: 47px;
-    margin-bottom: 23px;
   }
 }
 
@@ -95,6 +72,7 @@
   }
 
   .feedback-wrapper {
+    position: relative;
     margin-bottom: 37px;
     padding-left: 40px;
     padding-top: 33px;
@@ -113,6 +91,7 @@
   }
 
   .feedback-form {
+    position: static;
     justify-content: space-between;
   }
 
@@ -149,16 +128,16 @@
 
   .feedback-form input[id="data"] {
     left: 48px;
-    bottom: 58px;
+    bottom: 28px;
   }
 
-  .button--feedback-form-submit {
+  .feedback-form__submit {
     width: 411px;
     height: 47px;
     margin-bottom: 26px;
   }
 
-  .button--feedback-form-close {
+  .feedback-form__close {
     position: absolute;
     top: 20px;
     right: 20px;
