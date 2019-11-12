@@ -21,7 +21,7 @@
   }
 }
 
-.promo-text-block {
+.promo__wrapper {
   display: flex;
   flex-direction: column;
   color: $white;
@@ -31,7 +31,7 @@
   z-index: 1;
 }
 
-.promo-text-block__header {
+.promo__header {
   @include roboto-condensed(700);
   font-size: 80px;
   line-height: 94px;
@@ -42,7 +42,7 @@
   width: 718px;
 }
 
-.promo-text-block__text {
+.promo__text {
   @include pt-mono;
   font-size: 22px;
   line-height: 34px;
@@ -77,7 +77,7 @@
   background-color: $cyan;
 }
 
-.promo-text-block__scroll {
+.promo__scroll {
   @include pt-mono;
   font-size: 14px;
   line-height: 16px;
@@ -111,13 +111,13 @@
     }
   }
 
-  .promo-text-block {
+  .promo__wrapper {
     margin-left: 0;
     margin-bottom: 70px;
     padding-top: 75px;
   }
 
-  .promo-text-block__header {
+  .promo__header {
     font-size: 60px;
     line-height: 70px;
     margin: 0;
@@ -125,7 +125,7 @@
     width: 404px;
   }
 
-  .promo-text-block__text {
+  .promo__text {
     font-size: 18px;
     line-height: 28px;
     padding-left: 52px;
@@ -149,7 +149,7 @@
     width: 379px;
   }
 
-  .promo-text-block__scroll {
+  .promo__scroll {
     display: none;
   }
 }
@@ -172,7 +172,7 @@
     }
   }
 
-  .promo-text-block {
+  .promo__wrapper {
     margin-left: 5%;
     margin-top: 190px;
     margin-right: auto;
@@ -180,7 +180,7 @@
     padding-top: 0;
   }
 
-  .promo-text-block__header {
+  .promo__header {
     font-size: 40px;
     line-height: 47px;
     margin: 0;
@@ -189,7 +189,7 @@
     width: 277px;
   }
 
-  .promo-text-block__text {
+  .promo__text {
     font-size: 16px;
     line-height: 25px;
     margin-bottom: 40px;
