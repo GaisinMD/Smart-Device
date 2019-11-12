@@ -1,9 +1,5 @@
 'use strict';
 
-var hideClass = 'visually-hidden';
-
-var mobileMaxWidth = 768;
-var tabletMaxWidth = 1024;
 var textAbout = document.querySelector('.about').querySelectorAll('p')[1];
 var button = document.querySelector('.promo').querySelector('button');
 var mobileButtonText = 'Бесплатная консультация';
@@ -12,35 +8,6 @@ var mobileAboutText = 'Наши поставщики - мировые произ
 var aboutText = 'Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.';
 var copyrightYear = document.querySelector('.copyright__item--year').cloneNode(true);
 var logoFooter = document.querySelector('.social__logo-footer');
-
-var buttonSections = document.querySelector('#sections');
-var buttonAddress = document.querySelector('#address');
-
-var buttonBackgroundOpen = 'url("/img/button_section_open.png")';
-var buttonBackgroundClose = 'url("/img/button_section_close.png")';
-
-var siteSections = document.querySelector('.site-sections__list-wrapper');
-var address = document.querySelector('.address').querySelector('div');
-
-function toggleSection(section, buttonClose) {
-  if (section) {
-    if (section.classList.contains(hideClass)) {
-      section.classList.remove(hideClass);
-      buttonClose.style.backgroundImage = buttonBackgroundOpen;
-    } else {
-      section.classList.add(hideClass);
-      buttonClose.style.backgroundImage = buttonBackgroundClose;
-    }
-  }
-}
-
-function hideElement() {
-  if (document.body.clientWidth < mobileMaxWidth) {
-    siteSections.classList.add(hideClass);
-  } else {
-    siteSections.classList.remove(hideClass);
-  }
-}
 
 function changeElementText(element, width, text, replaceText) {
   if (element) {
@@ -65,25 +32,12 @@ function replaceElement(nodeBefore, node, width) {
   }
 }
 
-buttonSections.style.backgroundImage = buttonBackgroundClose;
-hideElement();
-changeElementText(button, mobileMaxWidth, buttonText, mobileButtonText);
-changeElementText(textAbout, tabletMaxWidth, aboutText, mobileAboutText);
-replaceElement(logoFooter, copyrightYear, tabletMaxWidth);
+function changeElements() {
+  changeElementText(button, window.constants.MOBILE_MAX_WIDTH, buttonText, mobileButtonText);
+  changeElementText(textAbout, window.constants.TABLET_MAX_WIDTH, aboutText, mobileAboutText);
+  replaceElement(logoFooter, copyrightYear, window.constants.TABLET_MAX_WIDTH);
+}
 
-buttonSections.addEventListener('click', function (evt) {
-  evt.preventDefault();
-  toggleSection(siteSections, evt.target);
-});
+changeElements();
 
-buttonAddress.addEventListener('click', function (evt) {
-  evt.preventDefault();
-  toggleSection(address, evt.target);
-});
-
-window.addEventListener('resize', function () {
-  changeElementText(button, mobileMaxWidth, buttonText, mobileButtonText);
-  changeElementText(textAbout, tabletMaxWidth, aboutText, mobileAboutText);
-  replaceElement(logoFooter, copyrightYear, tabletMaxWidth);
-  hideElement();
-});
+window.addEventListener('resize', changeElements);
