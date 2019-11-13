@@ -1,58 +1,87 @@
 'use strict';
 
-var siteSections = document.querySelector('.site-sections__list-wrapper');
-var buttonSections = document.querySelector('#sections');
+var hideClass = 'visually-hidden';
+var mobileMaxWidth = '(max-width: 767px)';
 
-var address = document.querySelector('.address__text');
-var buttonAddress = document.querySelector('#address');
+var toggleSecitons = document.querySelectorAll('.toggle-section');
 
-var buttonBackgroundOpen = 'url("../img/button_section_open.png")';
-var buttonBackgroundClose = 'url("../img/button_section_close.png")';
+var classPictureClose = '.toggle-section__toggle-close';
+var classPictureOpen = '.toggle-section__toggle-open';
+var classSectionText = '.toggle-section__text';
 
-function hideFooterSection(site, button) {
-  if (site) {
-    if (window.matchMedia(window.constants.MOBILE_MAX_WIDTH).matches) {
-      site.classList.add(window.constants.HIDE_CLASS);
-      if (button) {
-        button.style.backgroundImage = buttonBackgroundClose;
-      }
-    } else {
-      site.classList.remove(window.constants.HIDE_CLASS);
-    }
-  }
-}
 
-function toggleFooterSection(section, buttonClose) {
+function hideSection(section, openPic, closePic) {
   if (section) {
-    if (section.classList.contains(window.constants.HIDE_CLASS)) {
-      section.classList.remove(window.constants.HIDE_CLASS);
-      if (buttonClose) {
-        buttonClose.style.backgroundImage = buttonBackgroundOpen;
+    section.classList.add(hideClass);
+    if (closePic) {
+      closePic.classList.remove(hideClass);
+    }
+    if (openPic) {
+      openPic.classList.add(hideClass);
+    }
+  }
+}
+
+function showSection(section, openPic, closePic) {
+  if (section) {
+    section.classList.remove(hideClass);
+    if (closePic) {
+      closePic.classList.add(hideClass);
+    }
+    if (openPic) {
+      openPic.classList.add(hideClass);
+    }
+  }
+}
+
+function toggleFooterSectionContent(site) {
+  var openPic = site.querySelector(classPictureOpen);
+  var closePic = site.querySelector(classPictureClose);
+  var section = site.nextElementSibling;
+  if (section) {
+    if (section.classList.contains(hideClass)) {
+      section.classList.remove(hideClass);
+      if (closePic) {
+        closePic.classList.add(hideClass);
+      }
+      if (openPic) {
+        openPic.classList.remove(hideClass);
       }
     } else {
-      section.classList.add(window.constants.HIDE_CLASS);
-      if (buttonClose) {
-        buttonClose.style.backgroundImage = buttonBackgroundClose;
+      section.classList.add(hideClass);
+      if (closePic) {
+        closePic.classList.remove(hideClass);
+      }
+      if (openPic) {
+        openPic.classList.add(hideClass);
       }
     }
   }
 }
 
-function toggleFooter() {
-  hideFooterSection(siteSections, buttonSections);
-  hideFooterSection(address, buttonAddress);
+function setEvent(evt) {
+  return toggleFooterSectionContent(evt.currentTarget);
 }
 
-toggleFooter();
+function initToogles() {
+  for (var i = 0; i < toggleSecitons.length; i++) {
+    var elem = toggleSecitons[i];
+    var openIcon = elem.querySelector(classPictureOpen);
+    var closeIcon = elem.querySelector(classPictureClose);
+    var site = elem.querySelector(classSectionText);
 
-window.addEventListener('resize', toggleFooter);
 
-buttonSections.addEventListener('click', function (evt) {
-  evt.preventDefault();
-  toggleFooterSection(siteSections, evt.target);
-});
+    var button = elem.querySelector('.toggle-section__toggle');
+    if (window.matchMedia(mobileMaxWidth).matches) {
+      hideSection(site, openIcon, closeIcon);
+      button.addEventListener('click', setEvent);
+    } else {
+      showSection(site, openIcon, closeIcon);
+      button.removeEventListener('click', setEvent);
+    }
+  }
+}
 
-buttonAddress.addEventListener('click', function (evt) {
-  evt.preventDefault();
-  toggleFooterSection(address, evt.target);
-});
+initToogles();
+
+window.addEventListener('resize', initToogles);

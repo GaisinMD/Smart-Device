@@ -36,10 +36,6 @@
   max-width: 1500px;
 }
 
-.footer__toggle {
-  display: none;
-}
-
 //
 @media (max-width: $tablet-max-width) {
   .footer {
@@ -85,18 +81,13 @@
     min-width: 320px;
   }
 
-  .footer__toggle {
-    display: block;
-    position: relative;
-    width: 16px;
-    height: 16px;
-    font-size: 0;
-    color: transparent;
-    background-color: transparent;
-    border: none;
+  .footer-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 28px;
+    padding-bottom: 27px;
+    width: 100%;
     cursor: pointer;
-    background-image: url("../img/button_section_close.png");
-    background-position: center center;
-    background-repeat: no-repeat;
   }
 }

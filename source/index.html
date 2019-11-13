@@ -20,7 +20,7 @@
 
 <body>
   <div style="display: none;">
-    <include src="img/sprite_auto.svg"></include>
+    <include src="build/img/sprite_auto.svg"></include>
   </div>
   <div class="top-wrapper">
     <header class="header">
@@ -118,9 +118,9 @@
             1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.</p>
           <p>Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND.
             Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог
-            (РЖД),
-            РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители
-            светотехники России.</p>
+            <span>(РЖД),
+              РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители
+              светотехники России.<span></p>
           <a class="button about__button button--about" href="#">Подробнее</a>
         </article>
       </section>
@@ -216,12 +216,15 @@
           </li>
         </ul>
       </section>
-      <section class="site-sections">
-        <div class="footer-toggle">
-        <h2>Разделы сайта</h2>
-        <img class="footer-toggle__cross" src="img/button_section_close.png"">
+      <section class="site-sections toggle-section">
+        <div class="footer-toggle toggle-section__toggle" id="sections">
+          <h2>Разделы сайта</h2>
+          <img class="toggle-section__toggle-close visually-hidden" src="img/button_section_close.png" width="16"
+            height="16" alt="Показать текст раздела">
+          <img class="toggle-section__toggle-open visually-hidden" src="img/button_section_open.png" width="16"
+            height="16" alt="Скрыть текст раздела">
         </div>
-        <div class="site-sections__list-wrapper">
+        <div class="site-sections__text toggle-section__text">
           <ul class="list-sections">
             <li class="list-sections__item"><a href="#">О компании</a></li>
             <li class="list-sections__item"><a href="#">Продукты</a></li>
@@ -235,12 +238,15 @@
           </ul>
         </div>
       </section>
-      <section class="address">
-        <div>
-        <h2>Наш офис</h2>
-        <button class="footer__toggle" id='address' type="button">Раскрыть раздел</button>
+      <section class="address toggle-section">
+        <div class="footer-toggle toggle-section__toggle" id="address">
+          <h2>Наш офис</h2>
+          <img class="toggle-section__toggle-close visually-hidden" src="img/button_section_close.png" width="16"
+            height="16" alt="Показать текст раздела">
+          <img class="toggle-section__toggle-open visually-hidden" src="img/button_section_open.png" width="16"
+            height="16" alt="Скрыть текст раздела">
         </div>
-        <div class="address__text">
+        <div class="address__text toggle-section__text">
           <p>г. Мытищи, Олимпийский проспект, д.10</p>
           <p><a href="tel:+7(495)5894050">+7 (495) 589-40-50</a></p>
           <p><a href="tel:+7(495)0038767">+7 (925) 003-87-67</a></p>

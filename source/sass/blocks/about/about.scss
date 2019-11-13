@@ -81,6 +81,10 @@
     margin-bottom: 20px;
   }
 
+  .about__text p:last-of-type span {
+    display: none;
+  }
+
   .about__button {
     margin-top: 40px;
     margin-left: 3px;

@@ -3,7 +3,7 @@
   width: 46.53%;
 }
 
-.site-sections__list-wrapper {
+.site-sections__text {
   @include pt-mono;
   font-size: 15px;
   line-height: 25px;
@@ -17,7 +17,7 @@
     width: 33.84%;
   }
 
-  .site-sections__list-wrapper {
+  .site-sections__text {
     flex-direction: column;
   }
 }
@@ -30,10 +30,8 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-bottom: 28px;
     padding-left: 15px;
     padding-right: 15px;
-    padding-bottom: 3px;
     min-width: 288px;
     width: 100%;
 
@@ -49,7 +47,11 @@
     }
   }
 
-  .site-sections__list-wrapper {
+  .site-sections h2 {
+    margin-bottom: 0;
+  }
+
+  .site-sections__text {
     width: 90%;
     padding-bottom: 25px;
   }
