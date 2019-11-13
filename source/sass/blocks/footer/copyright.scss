@@ -46,18 +46,7 @@
 @media (max-width: $tablet-max-width) {
   .copyright__item {
     &--year {
-      @include pt-mono;
-      display: block;
-      font-size: 13px;
-      line-height: 24px;
-      opacity: 0.5;
-      letter-spacing: 0.04em;
-      color: $dark;
-      text-transform: uppercase;
-      text-decoration: none;
-      min-width: 233px;
-      margin-left: 12.12%;
-      align-self: center;
+      display: none;
     }
 
     &--nda {
@@ -71,10 +60,6 @@
     &--developed {
       margin-left: auto;
     }
-  }
-
-  .copyright__item + .copyright__item--year {
-    display: none;
   }
 }
 
