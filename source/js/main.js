@@ -90,6 +90,7 @@ function toggleFooterSectionContent(site) {
   var openPic = site.querySelector(classPictureOpen);
   var closePic = site.querySelector(classPictureClose);
   var section = site.nextElementSibling;
+  initToogles(section);
   if (section) {
     if (section.classList.contains(hideClass)) {
       section.classList.remove(hideClass);
@@ -115,20 +116,22 @@ function setEvent(evt) {
   return toggleFooterSectionContent(evt.currentTarget);
 }
 
-function initToogles() {
+function initToogles(exception) {
   for (var i = 0; i < toggleSecitons.length; i++) {
     var elem = toggleSecitons[i];
-    var openIcon = elem.querySelector(classPictureOpen);
-    var closeIcon = elem.querySelector(classPictureClose);
     var site = elem.querySelector(classSectionText);
-    var button = elem.querySelector(classButton);
+    if (exception !== site) {
+      var openIcon = elem.querySelector(classPictureOpen);
+      var closeIcon = elem.querySelector(classPictureClose);
+      var button = elem.querySelector(classButton);
 
-    if (window.matchMedia(mobileMaxWidth).matches) {
-      hideSection(site, openIcon, closeIcon);
-      button.addEventListener('click', setEvent);
-    } else {
-      showSection(site, openIcon, closeIcon);
-      button.removeEventListener('click', setEvent);
+      if (window.matchMedia(mobileMaxWidth).matches) {
+        hideSection(site, openIcon, closeIcon);
+        button.addEventListener('click', setEvent);
+      } else {
+        showSection(site, openIcon, closeIcon);
+        button.removeEventListener('click', setEvent);
+      }
     }
   }
 }

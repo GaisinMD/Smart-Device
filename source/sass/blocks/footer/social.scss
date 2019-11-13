@@ -62,6 +62,7 @@
   }
 
   .social__year {
+    @include margin-auto;
     margin-bottom: 32px;
   }
 }

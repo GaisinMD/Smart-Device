@@ -20,6 +20,11 @@ var classPictureOpen = '.toggle-section__toggle-open';
 var classSectionText = '.toggle-section__text';
 var classButton = '.toggle-section__toggle';
 
+// переменные скролла
+var anchors = [].slice.call(document.querySelectorAll('a[href*="#"]'));
+var animationTime = 300;
+var framesCount = 20;
+
 // функции формы
 function deactivateForm() {
   popupForm.classList.add(hideClass);
@@ -28,40 +33,6 @@ function deactivateForm() {
   closeFormButton.removeEventListener('click', deactivateForm);
   document.removeEventListener('keydown', onEscPress);
 }
-
-// собираем все якоря; устанавливаем время анимации и количество кадров
-var anchors = [].slice.call(document.querySelectorAll('a[href*="#"]'));
-var animationTime = 300;
-var framesCount = 20;
-
-anchors.forEach(function (item) {
-  // каждому якорю присваиваем обработчик события
-  item.addEventListener('click', function (e) {
-    // убираем стандартное поведение
-    e.preventDefault();
-
-    // для каждого якоря берем соответствующий ему элемент и определяем его координату Y
-    var coordY = document.querySelector(item.getAttribute('href')).getBoundingClientRect().top + window.pageYOffset;
-
-    // запускаем интервал, в котором
-    var scroller = setInterval(function () {
-      // считаем на сколько скроллить за 1 такт
-      var scrollBy = coordY / framesCount;
-
-      // если к-во пикселей для скролла за 1 такт больше расстояния до элемента
-      // и дно страницы не достигнуто
-      if (scrollBy > window.pageYOffset - coordY && window.innerHeight + window.pageYOffset < document.body.offsetHeight) {
-        // то скроллим на к-во пикселей, которое соответствует одному такту
-        window.scrollBy(0, scrollBy);
-      } else {
-        // иначе добираемся до элемента и выходим из интервала
-        window.scrollTo(0, coordY);
-        clearInterval(scroller);
-      }
-      // время интервала равняется частному от времени анимации и к-ва кадров
-    }, animationTime / framesCount);
-  });
-});
 
 function onEscPress(evt) {
   if (evt.keyCode === ESC_KEYCODE) {
@@ -119,6 +90,7 @@ function toggleFooterSectionContent(site) {
   var openPic = site.querySelector(classPictureOpen);
   var closePic = site.querySelector(classPictureClose);
   var section = site.nextElementSibling;
+  initToogles(section);
   if (section) {
     if (section.classList.contains(hideClass)) {
       section.classList.remove(hideClass);
@@ -144,23 +116,46 @@ function setEvent(evt) {
   return toggleFooterSectionContent(evt.currentTarget);
 }
 
-function initToogles() {
+function initToogles(exception) {
   for (var i = 0; i < toggleSecitons.length; i++) {
     var elem = toggleSecitons[i];
-    var openIcon = elem.querySelector(classPictureOpen);
-    var closeIcon = elem.querySelector(classPictureClose);
     var site = elem.querySelector(classSectionText);
-    var button = elem.querySelector(classButton);
+    if (exception !== site) {
+      var openIcon = elem.querySelector(classPictureOpen);
+      var closeIcon = elem.querySelector(classPictureClose);
+      var button = elem.querySelector(classButton);
 
-    if (window.matchMedia(mobileMaxWidth).matches) {
-      hideSection(site, openIcon, closeIcon);
-      button.addEventListener('click', setEvent);
-    } else {
-      showSection(site, openIcon, closeIcon);
-      button.removeEventListener('click', setEvent);
+      if (window.matchMedia(mobileMaxWidth).matches) {
+        hideSection(site, openIcon, closeIcon);
+        button.addEventListener('click', setEvent);
+      } else {
+        showSection(site, openIcon, closeIcon);
+        button.removeEventListener('click', setEvent);
+      }
     }
   }
 }
+
+// реализация скролла
+anchors.forEach(function (item) {
+  item.addEventListener('click', function (e) {
+    e.preventDefault();
+
+    var coordY = document.querySelector(item.getAttribute('href')).getBoundingClientRect().top + window.pageYOffset;
+
+    var scroller = setInterval(function () {
+      var scrollBy = coordY / framesCount;
+
+      if (scrollBy > window.pageYOffset - coordY && window.innerHeight + window.pageYOffset < document.body.offsetHeight) {
+        window.scrollBy(0, scrollBy);
+      } else {
+        window.scrollTo(0, coordY);
+        clearInterval(scroller);
+      }
+    }, animationTime / framesCount);
+  });
+});
+
 
 initToogles();
 
