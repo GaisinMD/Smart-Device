@@ -6,161 +6,176 @@
   left: 0;
   background: rgba(0, 0, 0, 0.5);
   z-index: 100;
+}
 
-  .form {
-    position: fixed;
-    top: calc(50% - 302px);
-    left: calc(50% - 245px);
-    padding-top: 0;
-    min-width: 490px;
-    width: 490px;
-    max-width: 490px;
-    min-height: 605px;
-    background-color: $cyan;
+.popup-form {
+  position: fixed;
+  top: calc(50% - 302px);
+  left: calc(50% - 245px);
+  padding-top: 0;
+  min-width: 490px;
+  width: 490px;
+  max-width: 490px;
+  min-height: 605px;
+  background-color: $cyan;
 
-    &::before {
-      display: none;
-    }
+  &::before {
+    display: none;
   }
+}
 
-  .feedback-wrapper {
-    position: relative;
-    margin-bottom: 37px;
-    padding-left: 40px;
-    padding-top: 33px;
-    min-width: 100%;
-    width: 100%;
-    border-radius: 0;
-  }
+.popup-wrapper {
+  position: relative;
+  color: $white;
+  margin-bottom: 37px;
+  padding-left: 40px;
+  padding-top: 33px;
+  min-width: 100%;
+  width: 100%;
+}
 
-  .feedback-wrapper h2 {
-    font-size: 28px;
-    line-height: 39px;
-  }
+.popup-wrapper h2 {
+  @include roboto-condensed(400);
+  font-size: 28px;
+  line-height: 39px;
+}
 
-  .feedback-wrapper p {
-    margin-bottom: 29px;
-    width: 85%;
-  }
+.popup-wrapper p {
+  @include pt-mono;
+  font-size: 16px;
+  line-height: 22px;
+  margin-bottom: 29px;
+  width: 85%;
+}
 
-  .feedback-form {
-    position: static;
-    justify-content: space-between;
-  }
+.popup-feedback {
+  position: static;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border-radius: 0;
+}
 
-  .feedback-form input[id="pop-name"],
-  .feedback-form input[id="pop-phone"] {
-    @include pt-mono;
-    font-size: 16px;
-    line-height: 22px;
-    border: none;
-    color: $white;
-    background-color: $light-cyan;
+.popup-feedback input {
+  @include pt-mono;
+  font-size: 16px;
+  line-height: 22px;
+  border: none;
+  color: $white;
+  background-color: $light-cyan;
+  margin-bottom: 30px;
+  padding-left: 24px;
+  width: 411px;
+  height: 52px;
+  border-radius: 0;
+
+  &:hover {
     margin-bottom: 30px;
-    padding-left: 24px;
-    width: 411px;
-    height: 52px;
-    border-radius: 0;
-
-    &:hover {
-      margin-bottom: 30px;
-      padding-left: 23px;
-      border: 1px $white solid;
-    }
-
-    &::placeholder {
-      color: $white;
-    }
-  }
-
-  .feedback-form textarea {
-    margin-bottom: 32px;
     padding-left: 23px;
-    padding-top: 15px;
-    width: 411px;
-    height: 104px;
-    border-radius: 0;
-
-    &:hover {
-      border: 1px $white solid;
-      padding-left: 22px;
-      padding-top: 14px;
-    }
+    border: 1px $white solid;
   }
 
-  .feedback-form label[for="pop-data"] {
-    @include pt-mono;
-    position: relative;
-    font-size: 14px;
-    line-height: 16px;
-    padding-left: 47px;
-    padding-top: 8px;
-    width: 380px;
-    order: 1;
-    opacity: 0.8;
-    cursor: pointer;
+  &::placeholder {
+    color: $white;
+  }
+}
 
-    &:hover {
-      opacity: 0.5;
-    }
+.popup-feedback textarea {
+  @include pt-mono;
+  border: none;
+  resize: none;
+  color: $white;
+  background-color: $light-cyan;
+  margin-bottom: 32px;
+  padding-left: 23px;
+  padding-top: 15px;
+  width: 411px;
+  height: 104px;
+  border-radius: 0;
 
-    &::before {
-      position: absolute;
-      content: "";
-      left: 0;
-      top: 8px;
-      width: 16px;
-      height: 16px;
-      border: 1px solid $white;
-      background: none;
-    }
+  &:hover {
+    border: 1px $white solid;
+    padding-left: 22px;
+    padding-top: 14px;
   }
 
-  .feedback-form input[id="pop-data"] {
-    left: 48px;
-    bottom: 28px;
+  &::placeholder {
+    color: $white;
+  }
+}
+
+.popup-feedback label[for="pop-data"] {
+  @include pt-mono;
+  position: relative;
+  font-size: 14px;
+  line-height: 16px;
+  padding-left: 47px;
+  padding-top: 8px;
+  width: 380px;
+  order: 1;
+  opacity: 0.8;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.5;
   }
 
-  .feedback-form input[id="pop-data"]:checked + label[for="pop-data"]::before {
-    background: url("../img/tick.png") center center no-repeat;
-  }
-
-  .feedback-form__submit {
-    width: 411px;
-    height: 47px;
-    margin-bottom: 26px;
-  }
-
-  .feedback-form__close {
+  &::before {
     position: absolute;
-    top: 20px;
-    right: 20px;
-    width: 17px;
-    height: 17px;
-    border: none;
-    background-color: transparent;
-    color: transparent;
-    font-size: 0;
-    cursor: pointer;
+    content: "";
+    left: 0;
+    top: 8px;
+    width: 16px;
+    height: 16px;
+    border: 1px solid $white;
+    background: none;
+  }
+}
 
-    &::before {
-      position: absolute;
-      content: "";
-      top: -3px;
-      width: 1px;
-      height: 22px;
-      background-color: $white;
-      transform: rotate(45deg);
-    }
+.popup-feedback input[id="pop-data"] {
+  left: 48px;
+  bottom: 28px;
+}
 
-    &::after {
-      position: absolute;
-      content: "";
-      top: -3px;
-      width: 1px;
-      height: 23px;
-      background-color: $white;
-      transform: rotate(-45deg);
-    }
+.popup-feedback input[id="pop-data"]:checked + label[for="pop-data"]::before {
+  background: url("../img/tick.png") center center no-repeat;
+}
+
+.popup-feedback__submit {
+  width: 411px;
+  height: 47px;
+  margin-bottom: 26px;
+}
+
+.popup-feedback__close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 17px;
+  height: 17px;
+  border: none;
+  background-color: transparent;
+  color: transparent;
+  font-size: 0;
+  cursor: pointer;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: -3px;
+    width: 1px;
+    height: 22px;
+    background-color: $white;
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: -3px;
+    width: 1px;
+    height: 23px;
+    background-color: $white;
+    transform: rotate(-45deg);
   }
 }

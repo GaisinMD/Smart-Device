@@ -7,10 +7,10 @@ var hideClass = 'visually-hidden';
 var body = document.querySelector('body');
 var popupForm = document.querySelector('.popup');
 var nameFocus = popupForm.querySelector('input[name=name]');
-var closeFormButton = popupForm.querySelector('.feedback-form__close');
+var closeFormButton = popupForm.querySelector('.popup-feedback__close');
 var mainButtonForForm = document.querySelector('.header__button');
-var scrollDenaiedStyle = 'position: fixed; overflow: hidden;';
-var scrollNormalStyle = 'position: static; overflow: auto;';
+var scrollDenaiedStyle = 'overflow: hidden;';
+var scrollNormalStyle = 'overflow: auto;';
 
 // переменные аккардеона
 var mobileMaxWidth = '(max-width: 767px)';
