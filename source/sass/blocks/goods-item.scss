@@ -17,6 +17,7 @@
     background-image: url("../img/arrow.png");
     background-repeat: no-repeat;
     background-position: center center;
+    pointer-events: none;
   }
 }
 
@@ -26,8 +27,8 @@
   padding-top: 50px;
   height: 100%;
 
-  &:hover {
-    opacity: 0.5;
+  &:hover img {
+    opacity: 0.15;
   }
 }
 
@@ -39,11 +40,16 @@
   margin-left: 44px;
   margin-top: 0;
   width: 170px;
+  position: relative;
+  z-index: 1;
+}
+
+.goods-item picture {
+  position: static;
 }
 
 .goods-item img {
   position: absolute;
-  content: "";
   top: 0;
   left: 0;
   width: 100%;
