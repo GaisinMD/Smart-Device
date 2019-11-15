@@ -3,6 +3,15 @@
 var ESC_KEYCODE = 27;
 var hideClass = 'visually-hidden';
 
+// переменные аккардеона
+var mobileMaxWidth = '(max-width: 767px)';
+var secitons = document.querySelectorAll('.toggle-section');
+var classSection = '.toggle-section';
+var sectionsClose = 'toggle-section--close';
+var sectionsOpen = 'toggle-section--open';
+var classButton = '.toggle-section__toggle';
+var classSectionText = '.toggle-section__text';
+
 // переменные формы
 var body = document.querySelector('body');
 var popupForm = document.querySelector('.popup');
@@ -11,14 +20,6 @@ var closeFormButton = popupForm.querySelector('.popup-feedback__close');
 var mainButtonForForm = document.querySelector('.header__button');
 var scrollDenaiedStyle = 'overflow: hidden;';
 var scrollNormalStyle = 'overflow: auto;';
-
-// переменные аккардеона
-var mobileMaxWidth = '(max-width: 767px)';
-var toggleSecitons = document.querySelectorAll('.toggle-section');
-var classPictureClose = '.toggle-section__toggle-close';
-var classPictureOpen = '.toggle-section__toggle-open';
-var classSectionText = '.toggle-section__text';
-var classButton = '.toggle-section__toggle';
 
 // переменные скролла
 var anchors = [].slice.call(document.querySelectorAll('a[href*="#"]'));
@@ -62,78 +63,40 @@ function activateForm() {
 }
 
 // функции аккардеона
-function hideSection(section, openPic, closePic) {
-  if (section) {
-    section.classList.add(hideClass);
-    if (closePic) {
-      closePic.classList.remove(hideClass);
-    }
-    if (openPic) {
-      openPic.classList.add(hideClass);
-    }
+function closeAllAccordeons() {
+  if (secitons) {
+    secitons.forEach(function (element) {
+      element.classList.add(sectionsClose);
+      element.classList.remove(sectionsOpen);
+    });
   }
 }
 
-function showSection(section, openPic, closePic) {
-  if (section) {
-    section.classList.remove(hideClass);
-    if (closePic) {
-      closePic.classList.add(hideClass);
-    }
-    if (openPic) {
-      openPic.classList.add(hideClass);
-    }
-  }
+function toggleAccordeon(element) {
+  element.classList.toggle(sectionsClose);
+  element.classList.toggle(sectionsOpen);
 }
 
-function toggleFooterSectionContent(site) {
-  var openPic = site.querySelector(classPictureOpen);
-  var closePic = site.querySelector(classPictureClose);
-  var section = site.nextElementSibling;
-  initToogles(section);
-  if (section) {
-    if (section.classList.contains(hideClass)) {
-      section.classList.remove(hideClass);
-      if (closePic) {
-        closePic.classList.add(hideClass);
-      }
-      if (openPic) {
-        openPic.classList.remove(hideClass);
-      }
+function onAccorderonHeadClick(evt) {
+  var accordeonElement = evt.currentTarget.closest(classSection);
+  if (accordeonElement.classList.contains(sectionsClose)) {
+    closeAllAccordeons();
+  }
+  toggleAccordeon(accordeonElement);
+}
+
+function initToggles() {
+  secitons.forEach(function (element) {
+    var head = element.querySelector(classButton);
+    if (window.matchMedia(mobileMaxWidth).matches) {
+      head.addEventListener('click', onAccorderonHeadClick);
+      element.classList.add(sectionsClose);
     } else {
-      section.classList.add(hideClass);
-      if (closePic) {
-        closePic.classList.remove(hideClass);
-      }
-      if (openPic) {
-        openPic.classList.add(hideClass);
-      }
+      head.removeEventListener('click', onAccorderonHeadClick);
+      element.classList.remove(sectionsClose);
+      element.classList.remove(sectionsOpen);
     }
-  }
-}
-
-function setEvent(evt) {
-  return toggleFooterSectionContent(evt.currentTarget);
-}
-
-function initToogles(exception) {
-  for (var i = 0; i < toggleSecitons.length; i++) {
-    var elem = toggleSecitons[i];
-    var site = elem.querySelector(classSectionText);
-    if (exception !== site) {
-      var openIcon = elem.querySelector(classPictureOpen);
-      var closeIcon = elem.querySelector(classPictureClose);
-      var button = elem.querySelector(classButton);
-
-      if (window.matchMedia(mobileMaxWidth).matches) {
-        hideSection(site, openIcon, closeIcon);
-        button.addEventListener('click', setEvent);
-      } else {
-        showSection(site, openIcon, closeIcon);
-        button.removeEventListener('click', setEvent);
-      }
-    }
-  }
+  });
 }
 
 // реализация скролла
@@ -157,8 +120,8 @@ anchors.forEach(function (item) {
 });
 
 
-initToogles();
+initToggles();
 
-window.addEventListener('resize', initToogles);
+window.addEventListener('resize', initToggles);
 
 mainButtonForForm.addEventListener('click', activateForm);

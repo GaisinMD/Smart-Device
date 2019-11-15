@@ -1,0 +1,38 @@
+@media (max-width: $mobile-max-width) {
+  .toggle-section__toggle {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: calc(50% - 8px);
+      right: 0;
+      width: 16px;
+      height: 16px;
+      background-repeat: no-repeat;
+      background-position: top center;
+    }
+  }
+
+  .toggle-section {
+    &--close {
+      .toggle-section__toggle::after {
+        background-image: url("../img/button_section_close.png");
+      }
+
+      .toggle-section__text {
+        display: none;
+      }
+    }
+
+    &--open {
+      .toggle-section__toggle::after {
+        background-image: url("../img/button_section_open.png");
+      }
+
+      .toggle-section__text {
+        display: block;
+      }
+    }
+  }
+}
