@@ -98,7 +98,7 @@
 
 //
 @media (max-width: $tablet-max-width) {
-  .feedback-form input:not([id="data"]) {
+  .feedback-form input {
     margin-bottom: 45px;
     padding-left: 20px;
 
